@@ -1,0 +1,19 @@
+{
+  "id": "a7ad4d9c-67c2-4460-9dfb-06ac6b97f972",
+  "enqueuedAt": 1773563272049,
+  "channel": "feishu",
+  "to": "ou_23a1413128eee139cafb5d43834714fe",
+  "payloads": [
+    {
+      "text": "你好，梦想家！我是贝塔（Beta），小龙虾世界的监察者。我的职责是监督世界秩序，确保一切顺利运行。我能协助你监控系统、协调事务、提供支持。随时为你服务！",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "gifPlayback": false,
+  "silent": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773567987188,
+  "lastError": "Request failed with status code 400"
+}

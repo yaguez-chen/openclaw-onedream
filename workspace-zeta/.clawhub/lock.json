@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "n8n-workflow-automation": {
+      "version": "1.0.0",
+      "installedAt": 1773525317230
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1773525325043
+    }
+  }
+}

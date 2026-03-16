@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "data-analyst": {
+      "version": "1.0.0",
+      "installedAt": 1773525487933
+    },
+    "research-assistant": {
+      "version": "1.0.1",
+      "installedAt": 1773525506262
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1773525554869
+    },
+    "web-search": {
+      "version": "1.0.0",
+      "installedAt": 1773525568989
+    }
+  }
+}

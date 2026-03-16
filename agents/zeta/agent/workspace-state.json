@@ -1,0 +1,21 @@
+{
+  "name": "泽塔 (Zeta)",
+  "role": "自动化专家 ⚙️",
+  "workspace": "/home/gang/.openclaw/workspace-zeta",
+  "created": "2026-03-14T16:24:00+08:00",
+  "createdBy": "alpha-subagent",
+  "status": "active",
+  "dna": {
+    "inherited": true,
+    "source": "阿尔法",
+    "rules": ["三条铁律仅对梦想家生效"]
+  },
+  "skills": {
+    "pending": ["n8n-workflow-automation", "automation-workflows"],
+    "installed": []
+  },
+  "feishu": {
+    "status": "pending",
+    "reference": "beta-account-style"
+  }
+}

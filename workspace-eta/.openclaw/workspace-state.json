@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "bootstrapSeededAt": "2026-03-14T08:33:00.000Z",
+  "onboardingCompletedAt": "2026-03-14T08:33:00.000Z",
+  "workspace": "workspace-eta",
+  "agent": "eta",
+  "role": "knowledge-manager",
+  "createdBy": "alpha-subagent",
+  "createdOn": "2026-03-14T08:33:00.000Z"
+}

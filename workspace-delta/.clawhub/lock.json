@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "data-model-designer": {
+      "version": "2.1.0",
+      "installedAt": 1773525159947
+    },
+    "data-analyst": {
+      "version": "1.0.0",
+      "installedAt": 1773525181280
+    }
+  }
+}

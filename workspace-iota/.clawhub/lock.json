@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "project-management-2": {
+      "version": "0.1.0",
+      "installedAt": 1773525292768
+    },
+    "taskr": {
+      "version": "1.0.2",
+      "installedAt": 1773525306685
+    }
+  }
+}

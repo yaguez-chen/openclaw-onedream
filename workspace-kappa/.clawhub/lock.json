@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design-3": {
+      "version": "0.1.0",
+      "installedAt": 1773525454958
+    },
+    "graphic-design": {
+      "version": "1.0.0",
+      "installedAt": 1773525462539
+    },
+    "diagram-generator": {
+      "version": "1.1.1",
+      "installedAt": 1773525477082
+    }
+  }
+}

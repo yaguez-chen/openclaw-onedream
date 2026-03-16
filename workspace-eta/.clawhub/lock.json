@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "feishu-wiki": {
+      "version": "1.0.0",
+      "installedAt": 1773525377036
+    },
+    "self-improvement": {
+      "version": "1.0.0",
+      "installedAt": 1773525385838
+    },
+    "agent-memory": {
+      "version": "1.0.0",
+      "installedAt": 1773525394020
+    }
+  }
+}

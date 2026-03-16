@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "feishu-common": {
+      "version": "1.0.1",
+      "installedAt": 1773525404787
+    },
+    "agent-autopilot": {
+      "version": "1.4.1",
+      "installedAt": 1773525444058
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "security-auditor": {
+      "version": "1.0.0",
+      "installedAt": 1773525334859
+    },
+    "security-audit-toolkit": {
+      "version": "1.0.0",
+      "installedAt": 1773525342729
+    },
+    "security-scanner": {
+      "version": "1.0.0",
+      "installedAt": 1773525350514
+    },
+    "credential-manager": {
+      "version": "1.3.0",
+      "installedAt": 1773525365784
+    }
+  }
+}

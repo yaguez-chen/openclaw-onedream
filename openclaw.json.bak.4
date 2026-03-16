@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.11",
+    "lastTouchedAt": "2026-03-13T00:51:20.416Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-13T00:51:20.398Z",
+    "lastRunVersion": "2026.3.11",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "xiaomi:default": {
+        "provider": "xiaomi",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "xiaomi": {
+        "baseUrl": "https://api.xiaomimimo.com/anthropic",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "mimo-v2-flash",
+            "name": "Xiaomi MiMo V2 Flash",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "xiaomi/mimo-claw-0301"
+      },
+      "models": {
+        "xiaomi/mimo-v2-flash": {
+          "alias": "Xiaomi"
+        },
+        "xiaomi/mimo-claw-0301": {}
+      },
+      "workspace": "/home/gang/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "workspace": "/home/gang/.openclaw/workspace"
+      },
+      {
+        "id": "beta",
+        "workspace": "/home/gang/.openclaw/agents/beta/workspace",
+        "agentDir": "/home/gang/.openclaw/agents/beta/agent"
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "direct",
+          "id": "ou_f276722b747b967cb82c0763caec0739"
+        }
+      }
+    },
+    {
+      "agentId": "beta",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "direct",
+          "id": "ou_f276722b747b967cb82c0763caec0739"
+        }
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "defaultAccount": "main",
+      "connectionMode": "websocket",
+      "domain": "feishu",
+      "accounts": {
+        "main": {
+          "appId": "cli_a9386ea9bb389cc5",
+          "appSecret": "yXzqVVoiGlCvBVm288oIEdtcmARdVsmL",
+          "botName": "阿尔法"
+        },
+        "beta": {
+          "appId": "cli_a939e52002b8dcb0",
+          "appSecret": "uPALid24soqn6lOF7zzdNgtprQk6u5hi",
+          "botName": "贝塔"
+        },
+        "default": {
+          "groupPolicy": "open"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "b97181f1924637035636e29df58195ac9e3c1c71459c72f4"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "plugins": {
+    "installs": {
+      "feishu": {
+        "source": "npm",
+        "spec": "@openclaw/feishu",
+        "installPath": "/home/gang/.openclaw/extensions/feishu",
+        "version": "2026.3.11",
+        "resolvedName": "@openclaw/feishu",
+        "resolvedVersion": "2026.3.11",
+        "resolvedSpec": "@openclaw/feishu@2026.3.11",
+        "integrity": "sha512-taayyfdoTUi0VStRKxS0uZNZXTjZaxakYS+HkpvSWfWvw/nx4ufz8YwVoIUy1yR/MeFvdsyUnpquS/YzaDmU3Q==",
+        "shasum": "d697d27a4d47cc5ce453656faa457d69b8d1ff71",
+        "resolvedAt": "2026-03-12T14:34:42.999Z",
+        "installedAt": "2026-03-12T14:34:52.573Z"
+      }
+    }
+  }
+}

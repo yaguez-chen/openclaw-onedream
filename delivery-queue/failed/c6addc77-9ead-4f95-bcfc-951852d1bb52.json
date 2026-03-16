@@ -1,0 +1,20 @@
+{
+  "id": "c6addc77-9ead-4f95-bcfc-951852d1bb52",
+  "enqueuedAt": 1773564040679,
+  "channel": "feishu",
+  "to": "ou_23a1413128eee139cafb5d43834714fe",
+  "accountId": "beta",
+  "payloads": [
+    {
+      "text": "🔵 测试消息：贝塔(Beta)在线！",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "gifPlayback": false,
+  "silent": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773571447610,
+  "lastError": "Request failed with status code 400"
+}
