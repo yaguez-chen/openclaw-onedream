@@ -1,0 +1,424 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.11",
+    "lastTouchedAt": "2026-03-13T04:27:44.307Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-13T00:51:20.398Z",
+    "lastRunVersion": "2026.3.11",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "xiaomi:default": {
+        "provider": "xiaomi",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "xiaomi": {
+        "baseUrl": "https://api.xiaomimimo.com/anthropic",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "mimo-v2-flash",
+            "name": "Xiaomi MiMo V2 Flash",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 8192
+          },
+          {
+            "id": "mimo-claw-0301",
+            "name": "Xiaomi MiMo Claw 0301",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 8192,
+            "api": "anthropic-messages"
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "xiaomi/mimo-claw-0301"
+      },
+      "models": {
+        "xiaomi/mimo-v2-flash": {
+          "alias": "Xiaomi"
+        },
+        "xiaomi/mimo-claw-0301": {}
+      },
+      "workspace": "/home/gang/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "30m",
+        "target": "last"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "workspace": "/home/gang/.openclaw/workspace",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "beta",
+        "name": "beta",
+        "workspace": "/home/gang/.openclaw/workspace-beta",
+        "agentDir": "/home/gang/.openclaw/agents/beta/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "gamma",
+        "name": "gamma",
+        "workspace": "/home/gang/.openclaw/workspace-gamma",
+        "agentDir": "/home/gang/.openclaw/agents/gamma/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "delta",
+        "name": "delta",
+        "workspace": "/home/gang/.openclaw/workspace-delta",
+        "agentDir": "/home/gang/.openclaw/agents/delta/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "iota",
+        "name": "iota",
+        "workspace": "/home/gang/.openclaw/workspace-iota",
+        "agentDir": "/home/gang/.openclaw/agents/iota/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "zeta",
+        "name": "zeta",
+        "workspace": "/home/gang/.openclaw/workspace-zeta",
+        "agentDir": "/home/gang/.openclaw/agents/zeta/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "epsilon",
+        "name": "epsilon",
+        "workspace": "/home/gang/.openclaw/workspace-epsilon",
+        "agentDir": "/home/gang/.openclaw/agents/epsilon/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "eta",
+        "name": "eta",
+        "workspace": "/home/gang/.openclaw/workspace-eta",
+        "agentDir": "/home/gang/.openclaw/agents/eta/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "theta",
+        "name": "theta",
+        "workspace": "/home/gang/.openclaw/workspace-theta",
+        "agentDir": "/home/gang/.openclaw/agents/theta/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "kappa",
+        "name": "kappa",
+        "workspace": "/home/gang/.openclaw/workspace-kappa",
+        "agentDir": "/home/gang/.openclaw/agents/kappa/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      },
+      {
+        "id": "lambda",
+        "name": "lambda",
+        "workspace": "/home/gang/.openclaw/workspace-lambda",
+        "agentDir": "/home/gang/.openclaw/agents/lambda/agent",
+        "heartbeat": {
+          "every": "30m",
+          "target": "last"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding",
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "feishu",
+        "accountId": "main"
+      }
+    },
+    {
+      "agentId": "beta",
+      "match": {
+        "channel": "feishu",
+        "accountId": "beta"
+      }
+    },
+    {
+      "agentId": "gamma",
+      "match": {
+        "channel": "feishu",
+        "accountId": "gamma"
+      }
+    },
+    {
+      "agentId": "delta",
+      "match": {
+        "channel": "feishu",
+        "accountId": "delta"
+      }
+    },
+    {
+      "agentId": "epsilon",
+      "match": {
+        "channel": "feishu",
+        "accountId": "epsilon"
+      }
+    },
+    {
+      "agentId": "iota",
+      "match": {
+        "channel": "feishu",
+        "accountId": "iota"
+      }
+    },
+    {
+      "agentId": "zeta",
+      "match": {
+        "channel": "feishu",
+        "accountId": "zeta"
+      }
+    },
+    {
+      "agentId": "eta",
+      "match": {
+        "channel": "feishu",
+        "accountId": "eta"
+      }
+    },
+    {
+      "agentId": "theta",
+      "match": {
+        "channel": "feishu",
+        "accountId": "theta"
+      }
+    },
+    {
+      "agentId": "kappa",
+      "match": {
+        "channel": "feishu",
+        "accountId": "kappa"
+      }
+    },
+    {
+      "agentId": "lambda",
+      "match": {
+        "channel": "feishu",
+        "accountId": "lambda"
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "defaultAccount": "main",
+      "connectionMode": "websocket",
+      "domain": "feishu",
+      "accounts": {
+        "main": {
+          "appId": "cli_a9386ea9bb389cc5",
+          "appSecret": "yXzqVVoiGlCvBVm288oIEdtcmARdVsmL",
+          "botName": "阿尔法"
+        },
+        "beta": {
+          "appId": "cli_a939e52002b8dcb0",
+          "appSecret": "uPALid24soqn6lOF7zzdNgtprQk6u5hi",
+          "botName": "贝塔"
+        },
+        "gamma": {
+          "appId": "cli_a93ef92f61219bd9",
+          "appSecret": "3AYfAh4Up3GgIljCQEZjfeq5pmcC2Ope",
+          "botName": "伽马"
+        },
+        "delta": {
+          "appId": "cli_a93fa11a8df89ceb",
+          "appSecret": "qI3BDrtLpBIvrC0hO2xNvmN7j7qBU5Zi",
+          "botName": "德尔塔"
+        },
+        "epsilon": {
+          "appId": "cli_a93fa3229ef8dced",
+          "appSecret": "ZI8GEU3Fi3tkuKHVz6eFXL4vWvWIsvuV",
+          "botName": "艾普西隆"
+        },
+        "default": {
+          "groupPolicy": "allowlist",
+          "allowFrom": [
+            "ou_f276722b747b967cb82c0763caec0739"
+          ],
+          "groupAllowFrom": [
+            "ou_f276722b747b967cb82c0763caec0739"
+          ]
+        },
+        "iota": {
+          "appId": "cli_a93fa24e53381cd3",
+          "appSecret": "uGsLuXv07mYdg7MbLGmuYcWi7UkxKAW7",
+          "botName": "约塔"
+        },
+        "zeta": {
+          "appId": "cli_a93fa3150bb8dcc9",
+          "appSecret": "U7qililSlLLEygxuChgQBbJq4C6zUCbw",
+          "botName": "泽塔"
+        },
+        "eta": {
+          "appId": "cli_a93f8eb10639dcb0",
+          "appSecret": "CR2REXmHrz47o3ZZqhaeTex4CN18eig5",
+          "botName": "艾塔"
+        },
+        "theta": {
+          "appId": "cli_a93f8f0e2df85ccd",
+          "appSecret": "bbe3jbntp9GpsuRhuQpPMcCYQUvh5QUq",
+          "botName": "西塔"
+        },
+        "kappa": {
+          "appId": "cli_a93fd7f1dea11cb6",
+          "appSecret": "wKPVieGYVdFm2ktlobsTzdHB7CLxoVKM",
+          "botName": "卡帕"
+        },
+        "lambda": {
+          "appId": "cli_a93cc73fecb8dcbb",
+          "appSecret": "eFnZl3fHxMPMwdTLiOrB3d6cw1INHPFc",
+          "botName": "拉姆达"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "b97181f1924637035636e29df58195ac9e3c1c71459c72f4"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    },
+    "installs": {}
+  }
+}
