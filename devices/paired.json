@@ -4,7 +4,7 @@
     "publicKey": "sJXo7EjHVqENe5lw_TTzHs5LiJ7s6rwWGsItFcKeuzc",
     "platform": "linux",
     "clientId": "cli",
-    "clientMode": "probe",
+    "clientMode": "cli",
     "role": "operator",
     "roles": [
       "operator"
@@ -71,7 +71,7 @@
           "operator.pairing"
         ],
         "createdAtMs": 1773327379088,
-        "lastUsedAtMs": 1773586627460
+        "lastUsedAtMs": 1773672460211
       }
     },
     "createdAtMs": 1773327379088,

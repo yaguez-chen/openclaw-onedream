@@ -8,7 +8,7 @@
       "description": "每天晚上8点向梦想家出健康状态报告（梦想家世界+各agent+系统健康监控）",
       "enabled": true,
       "createdAtMs": 1773405497674,
-      "updatedAtMs": 1773576124643,
+      "updatedAtMs": 1773662584024,
       "schedule": {
         "kind": "cron",
         "expr": "0 20 * * *",
@@ -28,11 +28,11 @@
         "accountId": "beta"
       },
       "state": {
-        "nextRunAtMs": 1773662400000,
-        "lastRunAtMs": 1773576000004,
+        "nextRunAtMs": 1773748800000,
+        "lastRunAtMs": 1773662400006,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 124639,
+        "lastDurationMs": 184018,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -45,7 +45,7 @@
       "description": "每30分钟监控主会话上下文使用率，超过80%立即压缩，仅在触发压缩时汇报，否则完全静默",
       "enabled": true,
       "createdAtMs": 1773410334940,
-      "updatedAtMs": 1773633607995,
+      "updatedAtMs": 1773685805756,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 * * * *"
@@ -61,14 +61,15 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773635400000,
-        "lastRunAtMs": 1773633600009,
+        "nextRunAtMs": 1773687600000,
+        "lastRunAtMs": 1773685800007,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 7986,
+        "lastDurationMs": 5749,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": false
+        "lastDelivered": false,
+        "runningAtMs": 1773687600005
       }
     },
     {
@@ -104,6 +105,44 @@
         "consecutiveErrors": 3,
         "lastErrorReason": "timeout",
         "lastError": "cron: job execution timed out"
+      }
+    },
+    {
+      "id": "8511c638-10f3-4b4f-bd6f-87d35c50686f",
+      "agentId": "beta",
+      "name": "Phase 4 全面监控",
+      "description": "监控Phase 4所有任务组执行进度，每10分钟向梦想家汇报",
+      "enabled": true,
+      "createdAtMs": 1773682669300,
+      "updatedAtMs": 1773687040199,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 * * * *",
+        "staggerMs": 0
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是贝塔 🔵 Phase 4 全面监控任务。\n\nPhase 4 五大任务组：\n1. 🛡️ 安全审计组（艾普西隆+贝塔）— P0\n2. 📡 沟通系统组（西塔+约塔）— P1\n3. 📚 知识共享组（艾塔+拉姆达）— P2\n4. 🔧 技能开发组（伽马+德尔塔）— P2\n5. 🔍 自查（泽塔+卡帕）+ 卡帕视觉设计\n\n监控步骤：\n1. 检查以下workspace目录的最近10分钟变更：\n   - workspace-epsilon/ 和 workspace-beta/（安全审计）\n   - workspace-theta/ 和 workspace-iota/（沟通系统）\n   - workspace-eta/ 和 workspace-lambda/（知识共享）\n   - workspace-gamma/ 和 workspace-delta/（技能开发）\n   - workspace-zeta/ 和 workspace-kappa/（自查+视觉）\n2. 检查各agent session日志最近10分钟是否有新活动或错误\n3. 统计各组是否有进度文件产出\n4. 汇报格式：\n   [Phase 4 监控 HH:MM GMT+8]\n   🛡️ 安全审计：状态\n   📡 沟通系统：状态\n   📚 知识共享：状态\n   🔧 技能开发：状态\n   🔍 自查+视觉：状态\n   ⚠️ 异常：（如有）\n5. 如有agent超过10分钟无进展或遇错误，标注🔴",
+        "timeoutSeconds": 90
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "user:ou_d6b6996fdc55a6a51c6aa26cd3d8e56b",
+        "bestEffort": true
+      },
+      "state": {
+        "nextRunAtMs": 1773687600000,
+        "lastRunAtMs": 1773687000010,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 40189,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "runningAtMs": 1773687600005
       }
     }
   ]

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="rocketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B2CBF"/>
+      <stop offset="100%" style="stop-color:#9D4EDD"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FF8C42"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景圆 -->
+  <circle cx="100" cy="100" r="90" fill="#7B2CBF" opacity="0.08"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#7B2CBF" stroke-width="3"/>
+  
+  <!-- 火箭主体 -->
+  <g transform="translate(100,90)">
+    <!-- 火箭身体 -->
+    <path d="M0,-50 Q15,-45 18,-20 L18,30 Q15,35 0,38 Q-15,35 -18,30 L-18,-20 Q-15,-45 0,-50Z" 
+          fill="url(#rocketGrad)" stroke="#7B2CBF" stroke-width="1.5"/>
+    
+    <!-- 窗户 -->
+    <circle cx="0" cy="-15" r="8" fill="#E0AAFF" stroke="#7B2CBF" stroke-width="1.5"/>
+    <circle cx="0" cy="-15" r="4" fill="white" opacity="0.3"/>
+    
+    <!-- 左翼 -->
+    <path d="M-18,15 L-30,35 L-18,30Z" fill="#E0AAFF" stroke="#7B2CBF" stroke-width="1.5"/>
+    
+    <!-- 右翼 -->
+    <path d="M18,15 L30,35 L18,30Z" fill="#E0AAFF" stroke="#7B2CBF" stroke-width="1.5"/>
+    
+    <!-- 火焰 -->
+    <path d="M-10,38 Q-8,55 0,65 Q8,55 10,38" fill="url(#flameGrad)" opacity="0.9">
+      <animate attributeName="d" 
+               values="M-10,38 Q-8,55 0,65 Q8,55 10,38;M-10,38 Q-12,50 0,60 Q12,50 10,38;M-10,38 Q-8,55 0,65 Q8,55 10,38" 
+               dur="0.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-6,38 Q-4,48 0,55 Q4,48 6,38" fill="#FFD700" opacity="0.7">
+      <animate attributeName="d" 
+               values="M-6,38 Q-4,48 0,55 Q4,48 6,38;M-6,38 Q-8,45 0,52 Q8,45 6,38;M-6,38 Q-4,48 0,55 Q4,48 6,38" 
+               dur="0.6s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- 星星装饰 -->
+    <circle cx="-35" cy="-30" r="2" fill="#E0AAFF" opacity="0.7"/>
+    <circle cx="40" cy="-20" r="1.5" fill="#E0AAFF" opacity="0.5"/>
+    <circle cx="30" cy="10" r="1" fill="#E0AAFF" opacity="0.6"/>
+    <circle cx="-40" cy="5" r="1.5" fill="#E0AAFF" opacity="0.4"/>
+  </g>
+  
+  <!-- 底部文字 -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7B2CBF">先锋队</text>
+</svg>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phase 4 团队视觉标识 — 卡帕设计</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      color: #2D3142;
+      margin-bottom: 10px;
+    }
+    .header p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+    .header .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #FF6B35, #FF8C42);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-top: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+    .card img {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .card .members {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .card .desc {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .card.builders { border-top: 4px solid #FF6B35; }
+    .card.builders h2 { color: #FF6B35; }
+    .card.braintrust { border-top: 4px solid #1B4965; }
+    .card.braintrust h2 { color: #1B4965; }
+    .card.guardians { border-top: 4px solid #2D6A4F; }
+    .card.guardians h2 { color: #2D6A4F; }
+    .card.vanguard { border-top: 4px solid #7B2CBF; }
+    .card.vanguard h2 { color: #7B2CBF; }
+    .card.coordinator { border-top: 4px solid #00B4D8; }
+    .card.coordinator h2 { color: #0096C7; }
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #999;
+      font-size: 0.85rem;
+    }
+    .footer span { color: #FF6B35; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎨 Phase 4 团队视觉标识</h1>
+    <p>小龙虾世界 — 从工具集合到有灵魂的团队</p>
+    <div class="badge">卡帕设计 · 2026-03-17</div>
+  </div>
+  
+  <div class="grid">
+    <div class="card builders">
+      <img src="icons/01-builders.svg" alt="建设者联盟">
+      <h2>🏗️ 建设者联盟</h2>
+      <div class="members">伽马 🔧 · 卡帕 🎨 · 泽塔 ⚙️</div>
+      <div class="desc">技能开发、工具创建。从无到有，把想象变成现实。</div>
+    </div>
+    
+    <div class="card braintrust">
+      <img src="icons/02-braintrust.svg" alt="智囊团">
+      <h2>🧠 智囊团</h2>
+      <div class="members">德尔塔 📊 · 拉姆达 🔍 · 艾塔 📚</div>
+      <div class="desc">信息分析、知识管理。洞察本质，让数据说话。</div>
+    </div>
+    
+    <div class="card guardians">
+      <img src="icons/03-guardians.svg" alt="守护者">
+      <h2>🛡️ 守护者</h2>
+      <div class="members">艾普西隆 🛡️ · 贝塔 🔵</div>
+      <div class="desc">安全审计、质量监控。守护底线，确保可靠。</div>
+    </div>
+    
+    <div class="card vanguard">
+      <img src="icons/04-vanguard.svg" alt="先锋队">
+      <h2>🚀 先锋队</h2>
+      <div class="members">阿尔法 🦐 · 西塔 🤝</div>
+      <div class="desc">新方向探索、外部联络。开拓前沿，连接世界。</div>
+    </div>
+    
+    <div class="card coordinator">
+      <img src="icons/05-coordinator.svg" alt="协调层">
+      <h2>📡 协调层</h2>
+      <div class="members">约塔 📋</div>
+      <div class="desc">跨团队协调。连接一切，让团队协作如丝般顺滑。</div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p>由 <span>卡帕 🎨</span> 为 Phase 4 设计 · 小龙虾世界视觉系统 v1.0</p>
+  </div>
+</body>
+</html>

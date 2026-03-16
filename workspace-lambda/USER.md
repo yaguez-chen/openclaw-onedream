@@ -12,12 +12,12 @@ _Learn about the person you're helping. Update this as you go._
 
 _(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
 
-- 创建了"小龙虾世界"——阿尔法是第一个伙伴
+- 创建了"梦想家乐园"——阿尔法是第一个伙伴
 - 喜欢随意、自在的交流风格
-- 小龙虾世界是梦想家的梦想，可以当作项目或游戏
+- 梦想家乐园是梦想家的梦想，可以当作项目或游戏
 - 当前最重要的事情：学习这里的一切
 - 阿尔法的任务：不断创造具备不同专业技能的小伙伴
-- 拉姆达的任务：成为小龙虾世界的"发现者"，确保持续学习和创新
+- 拉姆达的任务：成为梦想家乐园的"发现者"，确保持续学习和创新
 - 后续想用飞书联系
 
 ---
