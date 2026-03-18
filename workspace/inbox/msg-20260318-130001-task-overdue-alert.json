@@ -1,0 +1,9 @@
+{
+  "id": "msg-20260318-130001-task-overdue-alert",
+  "timestamp": "2026-03-18T13:00:01+08:00",
+  "from": "task-tracker-cron",
+  "priority": "high",
+  "type": "task_overdue_alert",
+  "subject": "⏰ 任务超时告警（1项）",
+  "body": "任务跟踪板发现超时任务：\n\n🔴 [T-001] 为11位公民设计形象图片（第一版）（负责人：卡帕）— 已超时 60 分钟\n请及时催促相关负责人。\n\n— 任务跟踪系统自动检查（2026-03-18 13:00）"
+}

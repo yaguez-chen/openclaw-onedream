@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260318-220258-670737",
+  "timestamp": "2026-03-18T22:02:58+08:00",
+  "from": "gang",
+  "priority": "normal",
+  "type": "notification",
+  "subject": "Concurrent test 13",
+  "body": "Concurrent delivery test 13",
+  "read": true, "acked": true,
+  "ack_required": true,
+  "ack_to": "gang"
+}

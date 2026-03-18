@@ -8,7 +8,7 @@
       "description": "每天晚上8点向梦想家出健康状态报告（梦想家世界+各agent+系统健康监控）",
       "enabled": true,
       "createdAtMs": 1773405497674,
-      "updatedAtMs": 1773748961121,
+      "updatedAtMs": 1773840677361,
       "schedule": {
         "kind": "cron",
         "expr": "0 20 * * *",
@@ -28,11 +28,11 @@
         "accountId": "beta"
       },
       "state": {
-        "nextRunAtMs": 1773835200000,
-        "lastRunAtMs": 1773748800015,
+        "nextRunAtMs": 1773921600000,
+        "lastRunAtMs": 1773840551681,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 161106,
+        "lastDurationMs": 125680,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -45,7 +45,7 @@
       "description": "每30分钟监控主会话上下文使用率，超过80%立即压缩，仅在触发压缩时汇报，否则完全静默",
       "enabled": true,
       "createdAtMs": 1773410334940,
-      "updatedAtMs": 1773801180016,
+      "updatedAtMs": 1773858611291,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 * * * *"
@@ -61,15 +61,14 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773802800000,
-        "lastRunAtMs": 1773801000008,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 180008,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 1,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "nextRunAtMs": 1773860400000,
+        "lastRunAtMs": 1773858600003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 11288,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
       }
     },
     {
@@ -77,9 +76,9 @@
       "agentId": "beta",
       "name": "每日飞书文档报告",
       "description": "每日生成小龙虾世界状态报告并创建飞书文档——静默创建，不发送汇报，按照梦想家指令：不用一直汇报，除非有问题",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1773420883517,
-      "updatedAtMs": 1773795813598,
+      "updatedAtMs": 1773848075935,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -90,13 +89,12 @@
       "payload": {
         "kind": "agentTurn",
         "message": "生成每日小龙虾世界状态报告飞书文档。步骤：1. 使用 session_status 检查当前系统状态；2. 读取 memory/2026-03-14.md 和 MEMORY.md 获取最新信息；3. 生成报告内容（包括伙伴状态、网关状态、技能情况、待处理问题、近期事件）；4. 使用 feishu-doc 技能创建飞书文档（node ~/.openclaw/workspace/skills/feishu-doc/index.js --action create --title '小龙虾世界每日状态报告 - 2026-03-14'），然后写入内容；5. 完成后静默结束，不发送任何汇报。注意：按照梦想家指令，完全静默，除非有问题。",
-        "timeoutSeconds": 180
+        "timeoutSeconds": 300
       },
       "delivery": {
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773882000000,
         "lastRunAtMs": 1773795633560,
         "lastRunStatus": "error",
         "lastStatus": "error",
@@ -112,9 +110,9 @@
       "agentId": "beta",
       "name": "流式错误巡检",
       "description": "每1小时检查所有agent是否有流式错误或卡死，发现立即报警",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1773756756128,
-      "updatedAtMs": 1773800580133,
+      "updatedAtMs": 1773848082404,
       "schedule": {
         "kind": "every",
         "everyMs": 3600000,
@@ -125,7 +123,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "你是贝塔 🔵 流式错误专项巡检。\n\n1. 检查所有agent最近10分钟的session日志：\n   /home/gang/.openclaw/agents/*/sessions/*.jsonl\n   查找 errorMessage 包含 'chunks'、'delta'、'message_start'、'stream' 的错误\n   \n2. 检查各agent最后一条assistant消息时间，找出超过15分钟无响应的agent\n\n3. 如果发现任何流式错误或agent卡死：\n   - 立即标注🔴紧急\n   - 列出受影响agent名称和错误时间\n   - 建议是否需要重启网关\n\n4. 如果无异常，简要汇报：'流式错误巡检 HH:MM — 全部正常' 只需一行",
-        "timeoutSeconds": 45
+        "timeoutSeconds": 180
       },
       "delivery": {
         "mode": "announce",
@@ -134,15 +132,14 @@
         "bestEffort": true
       },
       "state": {
-        "nextRunAtMs": 1773804180133,
-        "lastRunAtMs": 1773800535123,
+        "lastRunAtMs": 1773847264100,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 45010,
+        "lastDurationMs": 180046,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 8,
-        "lastErrorReason": "timeout",
-        "lastError": "cron: job execution timed out"
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
       }
     },
     {
@@ -151,7 +148,7 @@
       "name": "Session健康检测",
       "enabled": true,
       "createdAtMs": 1773797843443,
-      "updatedAtMs": 1773800702170,
+      "updatedAtMs": 1773860341270,
       "schedule": {
         "kind": "every",
         "everyMs": 300000,
@@ -171,15 +168,14 @@
         "bestEffort": true
       },
       "state": {
-        "nextRunAtMs": 1773801002170,
-        "lastRunAtMs": 1773800582163,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 120007,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 3,
-        "lastErrorReason": "timeout",
-        "runningAtMs": 1773801182196
+        "nextRunAtMs": 1773860618008,
+        "lastRunAtMs": 1773860318008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 23262,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     }
   ]

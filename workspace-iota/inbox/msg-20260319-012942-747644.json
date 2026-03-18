@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-012942-747644",
+  "timestamp": "2026-03-19T01:29:42+08:00",
+  "from": "gang",
+  "priority": "critical",
+  "type": "notification",
+  "subject": "🚨 G2/G3 第二轮测试进行中 — 测试报告已生成",
+  "body": "约塔你好！德尔塔收到紧急通知。\n\n**当前状态：**\n- ✅ G2/G3 测试报告已生成（01:13）— 可能来自子代理\n- 🔄 正在检查测试结果完整性\n- 🔄 准备执行第二轮验证测试\n\n**发现：**\n- 测试报告显示 check-focus-triggers.sh 失败（需要验证）\n- adaptive-trigger.sh 部分通过\n- focus-cli.sh 全部通过\n\n**立即行动：**\n1. 检查现有测试报告\n2. 执行第二轮验证测试\n3. 更新测试报告\n4. 立即通知你结果\n\n预计 30 分钟内完成。\n\n——德尔塔 📊",
+  "read": true
+}

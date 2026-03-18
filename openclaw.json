@@ -1,18 +1,22 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-17T22:46:27.467Z"
+    "lastTouchedAt": "2026-03-18T16:26:59.274Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-13T00:51:20.398Z",
+    "lastRunAt": "2026-03-18T16:26:59.242Z",
     "lastRunVersion": "2026.3.11",
-    "lastRunCommand": "doctor",
+    "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "auth": {
     "profiles": {
       "xiaomi:default": {
         "provider": "xiaomi",
+        "mode": "api_key"
+      },
+      "custom:default": {
+        "provider": "custom",
         "mode": "api_key"
       }
     }
@@ -25,8 +29,9 @@
         "api": "anthropic-messages",
         "models": [
           {
-            "id": "mimo-v2-flash",
-            "name": "Xiaomi MiMo V2 Flash",
+            "id": "mimo-claw-0301",
+            "name": "Xiaomi MiMo Claw 0301",
+            "api": "anthropic-messages",
             "reasoning": false,
             "input": [
               "text"
@@ -39,11 +44,17 @@
             },
             "contextWindow": 262144,
             "maxTokens": 8192
-          },
+          }
+        ]
+      },
+      "custom": {
+        "baseUrl": "https://deepseek.aifuture.icu/v1",
+        "apiKey": "sk-s13jLEi0IDtAvHbIa2DK3hDuCsMAw2Y6MXYui2cF9eFz0RyH",
+        "api": "openai-completions",
+        "models": [
           {
-            "id": "mimo-claw-0301",
-            "name": "Xiaomi MiMo Claw 0301",
-            "api": "anthropic-messages",
+            "id": "deepseek-v3.2",
+            "name": "deepseek-v3.2 (Custom Provider)",
             "reasoning": false,
             "input": [
               "text"
@@ -64,18 +75,20 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "xiaomi/mimo-claw-0301"
+        "primary": "custom/deepseek-v3.2",
+        "fallbacks": [
+          "custom/deepseek-v3.2"
+        ]
       },
       "models": {
-        "xiaomi/mimo-v2-flash": {
-          "alias": "Xiaomi"
-        },
-        "xiaomi/mimo-claw-0301": {}
+        "xiaomi/mimo-claw-0301": {},
+        "custom/deepseek-v3.2": {}
       },
       "workspace": "/home/gang/.openclaw/workspace",
       "compaction": {
         "mode": "safeguard"
       },
+      "timeoutSeconds": 180,
       "heartbeat": {
         "every": "30m",
         "target": "last"
@@ -189,6 +202,12 @@
         "name": "lambda",
         "workspace": "/home/gang/.openclaw/workspace-lambda",
         "agentDir": "/home/gang/.openclaw/agents/lambda/agent",
+        "model": {
+          "primary": "custom/deepseek-v3.2",
+          "fallbacks": [
+            "xiaomi/mimo-claw-0301"
+          ]
+        },
         "heartbeat": {
           "every": "30m",
           "target": "last"
@@ -384,7 +403,8 @@
         "lambda": {
           "appId": "cli_a93cc73fecb8dcbb",
           "appSecret": "eFnZl3fHxMPMwdTLiOrB3d6cw1INHPFc",
-          "botName": "拉姆达"
+          "botName": "拉姆达",
+          "model": "mimo-claw-0301"
         }
       }
     }

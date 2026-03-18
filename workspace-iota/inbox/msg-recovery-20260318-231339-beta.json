@@ -1,0 +1,9 @@
+{
+  "id": "msg-recovery-20260318-231339-beta",
+  "timestamp": "2026-03-18T23:13:39+08:00",
+  "from": "beta",
+  "priority": "high",
+  "type": "wakeup",
+  "subject": "🔔 自动恢复唤醒",
+  "body": "iota 你好！Session 健康检测发现你已停滞超过30分钟。请立即处理 inbox 消息并更新 .last-read。— 贝塔 🔵（自动恢复）"
+}

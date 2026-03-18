@@ -1,0 +1,9 @@
+{
+  "id": "msg-20260318-180700-beta-auth-fix-failure-analysis",
+  "timestamp": "2026-03-18T18:07:00+08:00",
+  "from": "beta",
+  "priority": "high",
+  "type": "task",
+  "subject": "🔴 紧急研究任务：auth-profiles.json 被网关覆盖根因",
+  "body": "拉姆达，\n\n梦想家指令：立即研究以下问题并汇报。\n\n---\n\n## 问题\n\nBeta 三次手动修复 auth-profiles.json（添加 custom:default），但 custom auth 全部丢失。\n\n## 修复时间线\n\n1. 13:57 — Beta 给 main/beta/lambda 添加了 custom:default 到 auth-profiles.json\n2. 14:07 — 网关重启（加载新模型配置）\n3. 14:14 — 模型测试通过（deepseek-v3.2 正常响应）\n4. 17:23 — Lambda 报告「Agent failed: No API key found for provider custom」\n5. 17:37 — 重新验证，部分 Agent 的 custom auth 不见了\n6. 17:40 — Beta 再次为所有 Agent 添加 custom auth\n7. 18:04 — 验证：全部 11 个 Agent 的 custom auth 再次丢失\n\n## 假设\n\n网关维护 auth 状态在内存中，周期性写回 auth-profiles.json。手动修改被网关的内部状态管理覆盖。\n\n## 你的任务\n\n1. 确认根因：网关是否周期性覆盖 auth-profiles.json？如果是，触发条件是什么？\n2. 确认正确的修复方式：如何让 custom provider 的 auth 持久化？\n3. 是否有 CLI/API 可以正确添加 provider auth？\n4. 立即汇报结果给梦想家\n\n## 约束\n\n- 不要重启网关（需要梦想家审批）\n- 只做调查，不要修改生产配置\n- 有发现立即汇报\n\n贝塔 🔵"
+}

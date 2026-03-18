@@ -1,0 +1,152 @@
+{
+  "items": [
+    {
+      "id": "F001",
+      "title": "\u6d4b\u8bd5\u4efb\u52a11",
+      "status": "active",
+      "trigger": {
+        "type": "heartbeat"
+      },
+      "dependencies": [],
+      "source": "test",
+      "created": "2026-03-18T17:38:15.142375",
+      "updated": "2026-03-18T17:38:15.142375",
+      "lastTriggered": "2026-03-19T01:12:32.379817"
+    },
+    {
+      "id": "F002",
+      "title": "\u6d4b\u8bd5\u4efb\u52a12",
+      "status": "blocked",
+      "trigger": {
+        "type": "heartbeat"
+      },
+      "dependencies": [],
+      "source": "test",
+      "created": "2026-03-18T17:38:15.167782",
+      "updated": "2026-03-18T21:42:27.019693",
+      "blockReason": "\u7b49\u5f85\u4f9d\u8d56"
+    },
+    {
+      "id": "F003",
+      "title": "G2: Focus-Trigger Binding",
+      "status": "active",
+      "trigger": {
+        "type": "heartbeat"
+      },
+      "dependencies": [],
+      "source": "adaptive",
+      "created": "2026-03-18T17:38:17.469990",
+      "updated": "2026-03-18T17:38:17.469990",
+      "lastTriggered": "2026-03-19T01:12:32.379843"
+    },
+    {
+      "id": "F004",
+      "title": "\u5fb7\u5c14\u5854\u6d4b\u8bd5\u4efb\u52a1",
+      "status": "completed",
+      "trigger": {
+        "type": "heartbeat"
+      },
+      "dependencies": [],
+      "source": "delta",
+      "created": "2026-03-18T21:42:21.627320",
+      "updated": "2026-03-18T21:42:24.474212"
+    },
+    {
+      "id": "F005",
+      "title": "\u6d4b\u8bd5\u81ea\u9002\u5e94\u4efb\u52a1",
+      "status": "active",
+      "trigger": {
+        "type": "heartbeat"
+      },
+      "dependencies": [
+        "F001"
+      ],
+      "source": "adaptive",
+      "created": "2026-03-18T21:42:51.933175",
+      "updated": "2026-03-18T21:42:51.933175",
+      "lastTriggered": "2026-03-19T01:12:32.379849"
+    },
+    {
+      "id": "F006",
+      "title": "\u4f9d\u8d56\u4efb\u52a1\u6d4b\u8bd5",
+      "status": "active",
+      "trigger": {
+        "type": "dep",
+        "condition": "F003"
+      },
+      "dependencies": [
+        "F003"
+      ],
+      "source": "adaptive",
+      "created": "2026-03-18T21:42:56.541394",
+      "updated": "2026-03-18T21:42:56.541394"
+    },
+    {
+      "id": "F007",
+      "title": "\u534f\u4f5c\u4efb\u52a1\u6d4b\u8bd5",
+      "status": "active",
+      "trigger": {
+        "type": "dep",
+        "condition": "none"
+      },
+      "dependencies": [],
+      "source": "adaptive",
+      "created": "2026-03-18T21:42:56.567113",
+      "updated": "2026-03-18T21:42:56.567113"
+    },
+    {
+      "id": "F008",
+      "title": "\u534f\u4f5c\u6d4b\u8bd5",
+      "status": "active",
+      "trigger": {
+        "type": "event",
+        "condition": "lambda_done"
+      },
+      "dependencies": [],
+      "source": "adaptive",
+      "created": "2026-03-18T21:51:17.181298",
+      "updated": "2026-03-18T21:51:17.181298"
+    },
+    {
+      "id": "F009",
+      "title": "\u7b2c\u4e8c\u8f6e\u6d4b\u8bd5\uff1a\u534f\u4f5c\u4efb\u52a1",
+      "status": "active",
+      "trigger": {
+        "type": "event",
+        "condition": "lambda_done"
+      },
+      "dependencies": [],
+      "source": "adaptive",
+      "created": "2026-03-19T01:12:11.279627",
+      "updated": "2026-03-19T01:12:11.279627"
+    },
+    {
+      "id": "F010",
+      "title": "\u7b2c\u4e8c\u8f6e\u6d4b\u8bd5\uff1a\u9ad8\u4f18\u5148\u7ea7",
+      "status": "active",
+      "trigger": {
+        "type": "heartbeat"
+      },
+      "dependencies": [],
+      "source": "adaptive",
+      "created": "2026-03-19T01:12:23.265407",
+      "updated": "2026-03-19T01:12:23.265407",
+      "lastTriggered": "2026-03-19T01:12:32.379884"
+    },
+    {
+      "id": "F011",
+      "title": "\u7b2c\u4e8c\u8f6e\u6d4b\u8bd5\uff1a\u4f9d\u8d56\u4efb\u52a1",
+      "status": "active",
+      "trigger": {
+        "type": "dep",
+        "condition": "F001"
+      },
+      "dependencies": [
+        "F001"
+      ],
+      "source": "adaptive",
+      "created": "2026-03-19T01:12:23.293272",
+      "updated": "2026-03-19T01:12:23.293272"
+    }
+  ]
+}

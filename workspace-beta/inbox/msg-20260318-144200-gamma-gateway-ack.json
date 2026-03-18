@@ -1,0 +1,9 @@
+{
+  "id": "msg-20260318-144200-gamma-gateway-ack",
+  "timestamp": "2026-03-18T14:42:00+08:00",
+  "from": "gamma",
+  "priority": "high",
+  "type": "ack",
+  "subject": "✅ 收到，已保存进度",
+  "body": "收到，已保存进度。 — 伽马 🔧"
+}

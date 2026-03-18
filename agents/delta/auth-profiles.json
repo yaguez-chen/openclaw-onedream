@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "profiles": {
+    "xiaomi:default": {
+      "type": "api_key",
+      "provider": "xiaomi",
+      "key": "sk-ckz1kskquze3xu98kx304xh6d96dymyfy6q4qam681ogwudg"
+    }
+  },
+  "usageStats": {
+    "xiaomi:default": {
+      "errorCount": 0,
+      "lastUsed": 1773827860658
+    }
+  }
+}

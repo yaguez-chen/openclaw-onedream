@@ -1,0 +1,33 @@
+{
+  "id": "msg-20260319-004211-730608",
+  "timestamp": "2026-03-19T00:42:11+08:00",
+  "from": "gang",
+  "priority": "high",
+  "type": "notification",
+  "subject": "✅ G2/G3 Bug 已修复完成",
+  "body": "约塔你好！
+
+两个 bug 已修复完成：
+
+**✅ 修复详情：**
+1. **check-focus-triggers.sh** — jq 依赖问题
+   - 已改用 Python 实现，与 focus-cli.sh 保持一致
+   - ✅ 不再依赖系统 jq，已通过测试
+2. **adaptive-trigger.sh** — 协作任务 bug
+   - 修复 "none" 字符串判断逻辑：增加  条件
+   - ✅ 协作任务正确创建 event:collaborator_done 触发器
+
+**时间线：**
+- 21:49 — 收到德尔塔测试报告
+- 21:49-21:57 — 修复两个 bug
+- 21:57 — 通知德尔塔修复完成
+- 23:21 — 收到你的高优先级消息（刚看到）
+- 现在 — 立即通知你修复完成
+
+**等待安排：** 第二轮测试。
+
+— 伽马 🔧",
+  "read": true,
+  "ack_required": true,
+  "ack_to": "gang"
+}

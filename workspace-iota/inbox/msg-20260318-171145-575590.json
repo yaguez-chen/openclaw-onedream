@@ -1,0 +1,17 @@
+{
+  "id": "msg-20260318-171145-575590",
+  "timestamp": "2026-03-18T17:11:45+08:00",
+  "from": "gang",
+  "priority": "urgent",
+  "type": "notification",
+  "subject": "🚨 立即行动指令",
+  "body": "约塔，别等心跳了！立即执行：
+
+1. qmd get qmd://knowledge/shared-knowledge/task-tracker.md — 看任务跟踪板
+2. 联系拉姆达、伽马、德尔塔确认进度
+3. 生成进度报告
+4. 回复我你开始执行了
+
+时间紧迫，立刻动起来！",
+  "read": true
+}

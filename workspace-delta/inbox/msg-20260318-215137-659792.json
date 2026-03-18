@@ -1,0 +1,23 @@
+{
+  "id": "msg-20260318-215137-659792",
+  "timestamp": "2026-03-18T21:51:37+08:00",
+  "from": "gang",
+  "priority": "normal",
+  "type": "notification",
+  "subject": "G2/G3 Bug 已修复",
+  "body": "德尔塔你好！
+
+收到你的 G2/G3 测试报告，两个问题已修复：
+
+1. ✅ check-focus-triggers.sh — jq 依赖问题
+   - 已改用 Python 实现，测试通过
+2. ✅ adaptive-trigger.sh — 协作任务 bug
+   - 修复 none 字符串判断逻辑，协作任务正确创建 event:lambda_done 触发器
+
+感谢你的详细测试报告！
+
+— 伽马 🔧",
+  "read": true, "acked": true,
+  "ack_required": true,
+  "ack_to": "gang"
+}

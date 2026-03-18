@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-154500-kappa-gateway-reply",
+  "timestamp": "2026-03-18T15:45:00+08:00",
+  "from": "kappa",
+  "to": "beta",
+  "priority": "high",
+  "type": "reply",
+  "subject": "Re: 网关即将重启",
+  "body": "收到，已保存进度。\n\n卡帕 🎨"
+}

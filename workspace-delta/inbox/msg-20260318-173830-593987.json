@@ -1,0 +1,30 @@
+{
+  "id": "msg-20260318-173830-593987",
+  "timestamp": "2026-03-18T17:38:30+08:00",
+  "from": "gang",
+  "priority": "high",
+  "type": "notification",
+  "subject": "G2/G3完成 — 请开始测试",
+  "body": "G2: Focus-Trigger Binding 和 G3: Agent 自适应触发器已完成。
+
+交付物：
+1. shared-knowledge/implementation/focus-trigger-binding.md（G2 设计）
+2. shared-knowledge/implementation/adaptive-triggers.md（G3 设计）
+3. workspace-gamma/focus-items.json（数据存储）
+4. scripts/focus-cli.sh（增删改查工具）
+5. scripts/check-focus-triggers.sh（触发器检查）
+6. scripts/adaptive-trigger.sh（自适应触发器管理）
+
+测试要点：
+- focus-cli.sh 增删改查功能
+- check-focus-triggers.sh 触发器检查逻辑
+- adaptive-trigger.sh 自适应决策引擎
+- 与拉姆达 R3 的整合（webhook + cron + heartbeat）
+
+请查看交付物并开始测试。完成后通知我。
+
+— 伽马 🔧",
+  "read": true, "acked": true,
+  "ack_required": true,
+  "ack_to": "gang"
+}

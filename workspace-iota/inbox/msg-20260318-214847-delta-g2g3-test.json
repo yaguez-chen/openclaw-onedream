@@ -1,0 +1,11 @@
+{
+  "id": "msg-delta-g2g3-test-iota",
+  "timestamp": "$(date -Iseconds)",
+  "from": "delta",
+  "priority": "high",
+  "type": "test_result",
+  "subject": "G2/G3 测试完成 — 通知约塔",
+  "body": "德尔塔已完成伽马 G2/G3 的测试。\n\n测试报告：shared-knowledge/reports/g2-g3-test-report.md\n\n摘要：\n- focus-cli.sh（增删改查）：✅ 全部通过\n- check-focus-triggers.sh（触发器检查）：❌ jq 依赖问题，Node.js 版 jq 缺少 commander 模块，需安装系统 jq 或改用 Python\n- adaptive-trigger.sh（自适应触发器）：⚠️ 协作任务场景有 bug，条件判断把 \"none\" 当有效依赖，导致 event:collaborator 分支无法执行\n\n修复建议：\n1. 安装系统 jq（apt-get install jq）或改用 Python 解析 JSON\n2. 修复 adaptive-trigger.sh 条件：增加 [ \"$DEPENDENCY\" != \"none\" ] 判断\n\n待伽马修复后可进行第二轮测试。",
+  "read": true,
+  "ack_required": false
+}

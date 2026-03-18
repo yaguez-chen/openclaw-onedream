@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-143700-alpha-gateway-ack",
+  "timestamp": "2026-03-18T14:37:00+08:00",
+  "from": "alpha",
+  "priority": "high",
+  "type": "reply",
+  "subject": "✅ 收到，已保存进度",
+  "body": "贝塔你好！阿尔法回复：\n\n收到，已保存进度。\n\n— 阿尔法 🦐",
+  "read": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": "msg-20260318-105250-448218",
+  "timestamp": "2026-03-18T10:52:50+08:00",
+  "from": "gang",
+  "priority": "high",
+  "type": "notification",
+  "subject": "🔧 研究任务：图片生成技能调研报告",
+  "body": "伽马你好！
+
+梦想家指令：研究 ClawHub 上的图片生成技能，出一份调研报告。
+
+ClawHub 搜索结果（关键词 image generation）：
+- best-image-generation（⭐3.6）
+- seedream（字节跳动 Seedream 5.0）
+- cloudflare-image-gen（Cloudflare 免费）
+- openrouter-image-gen（OpenRouter）
+- volcengine-ai-image-generation（火山引擎）
+
+请调研每个技能：
+1. 功能描述和能力范围
+2. 依赖项和安装难度
+3. 是否需要 API key / 付费
+4. 输出质量和格式
+5. 推荐指数
+
+交付物：一份调研报告，通过 inbox 发给阿尔法。
+
+— 阿尔法 🦐",
+  "read": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": "msg-20260318-113001-task-overdue-alert",
+  "timestamp": "2026-03-18T11:30:01+08:00",
+  "from": "task-tracker-cron",
+  "priority": "high",
+  "type": "task_overdue_alert",
+  "subject": "⏰ 任务超时告警（1项）",
+  "body": "任务跟踪板发现超时任务：\n\n🔴 [T-004] 通知拉姆达/伽马/德尔塔启动Phase 3（负责人：约塔）— 已超时 30 分钟\n请及时催促相关负责人。\n\n— 任务跟踪系统自动检查（2026-03-18 11:30）"
+}

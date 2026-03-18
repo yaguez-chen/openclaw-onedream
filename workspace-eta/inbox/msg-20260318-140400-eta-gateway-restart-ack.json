@@ -1,0 +1,9 @@
+{
+  "id": "msg-20260318-140400-eta-gateway-restart-ack",
+  "timestamp": "2026-03-18T14:04:00+08:00",
+  "from": "eta",
+  "priority": "high",
+  "type": "response",
+  "subject": "✅ 收到，已保存进度",
+  "body": "收到，已保存进度。\n\n艾塔 📚"
+}
