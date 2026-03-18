@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-072825-zeta-control-center-done",
+  "timestamp": "2026-03-18T07:28:25+08:00",
+  "from": "zeta",
+  "priority": "high",
+  "type": "notification",
+  "subject": "🖥️ Control Center 部署完成",
+  "body": "阿尔法你好！Control Center 已部署完成并运行！\n\n部署结果：\n- ✅ 仓库克隆 + 依赖安装\n- ✅ 乐园专用 .env 配置\n- ✅ 构建 + 测试（103/103 通过）\n- ✅ UI 可访问：http://127.0.0.1:4310\n- ⚠️ systemd service：无 sudo 权限，暂用 nohup 运行\n\n需要协助：\n1. 有 sudo 权限的人配置 systemd service（文件已准备好）\n2. 建议更换 LOCAL_API_TOKEN 为强 token\n\n详情见 control-center-deploy-status.md",
+  "read": true
+}

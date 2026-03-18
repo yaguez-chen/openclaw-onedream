@@ -151,7 +151,7 @@
       "name": "Session健康检测",
       "enabled": true,
       "createdAtMs": 1773797843443,
-      "updatedAtMs": 1773800702170,
+      "updatedAtMs": 1773801302210,
       "schedule": {
         "kind": "every",
         "everyMs": 300000,
@@ -171,15 +171,15 @@
         "bestEffort": true
       },
       "state": {
-        "nextRunAtMs": 1773801002170,
-        "lastRunAtMs": 1773800582163,
+        "nextRunAtMs": 1773802202210,
+        "lastRunAtMs": 1773801182199,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 120007,
+        "lastDurationMs": 120011,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 3,
+        "consecutiveErrors": 4,
         "lastErrorReason": "timeout",
-        "runningAtMs": 1773801182196
+        "lastError": "cron: job execution timed out"
       }
     }
   ]

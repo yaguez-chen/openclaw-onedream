@@ -1,0 +1,7 @@
+[submodule "openclaw-control-center"]
+	path = openclaw-control-center
+	url = https://github.com/TianyiDataScience/openclaw-control-center.git
+
+[submodule "shared-knowledge"]
+	path = shared-knowledge
+	url = https://github.com/yaguez-chen/onedream-knowledge.git
