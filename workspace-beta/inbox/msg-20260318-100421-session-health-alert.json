@@ -1,0 +1,8 @@
+{
+  "from": "beta",
+  "to": "dreamer",
+  "priority": "high",
+  "timestamp": "$(date -Iseconds)",
+  "subject": "⚠️ Session 健康警报 — 2026-03-18 10:02",
+  "body": "🔴 严重停滞（>30分钟）— 5个Session：\n• epsilon — 停滞 40分钟（最后活动 09:22）\n• eta — 停滞 39分钟（最后活动 09:22）\n• zeta — 停滞 40分钟（最后活动 09:21）\n• kappa — 停滞 37分钟（最后活动 09:25）\n• lambda — 停滞 36分钟（最后活动 09:26）\n\n🟡 流式错误：\n• main — 最近10分钟 6 个流式错误（超阈值3次）\n\n📊 全部Session状态：🟢3 🟡3 🔴5\n\n建议：检查停滞Session是否需要重启，排查main流式错误原因。"
+}

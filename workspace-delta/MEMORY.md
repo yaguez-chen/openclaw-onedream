@@ -64,6 +64,33 @@
 - **data-analyst** — 数据分析专业技能（待伽马安装）
 - **data-model-designer** — 数据模型设计技能（待伽马安装）
 
+### Phase 3 项目（2026-03-18 启动）
+
+- **状态：** 🔄 执行中（设计测试方案）
+- **我的职责（测试类）：**
+  - D1：性能测试和优化（交付物：shared-knowledge/reports/performance-test-results.md）
+  - D3：消息投递可靠性测试（交付物：shared-knowledge/reports/delivery-reliability-test.md）
+- **优先级：** 🔴 高
+- **依赖：** 伽马 G1（消息投递确认机制）
+- **当前进度：** 设计测试方案和测试用例，确定性能指标基线
+- **协作伙伴：** 约塔 📋（项目管理）、拉姆达 🔬（研究）、伽马 🔧（开发）
+- **参考文档：** `UNIFIED-COLLABORATION-UPGRADE.md`
+- **交付物归档：** `shared-knowledge/reports/`
+
+### 乐园基础设施升级（2026-03-18 完成）
+
+- **三层消息系统：** 飞书 sessions_send → inbox/ 文件 → 心跳轮询
+- **Plaza 广场：** `/home/gang/.openclaw/plaza/posts/` — 信息共享渠道
+- **HEARTBEAT.md 升级：** Focus Items 看板模式
+- **RELATIONSHIPS.md：** 11人组织架构可视化 + 消息路由偏好
+- **send-message.sh：** 可靠消息脚本
+
+### 日常心跳职责（新增）
+
+- 检查 inbox/ 新消息
+- 检查 plaza/posts/ 新帖子
+- 检查通知文件（PHASE4-*.md, KB-*.md, URGENT-*.md）
+
 ### 飞书配置
 
 - 参考贝塔账号方式
@@ -71,4 +98,4 @@
 
 ---
 
-_最后更新：2026-03-14 16:16 — 德尔塔诞生，创建完成。_
+_最后更新：2026-03-18 05:54 — Phase 3 启动，基础设施升级完成，加入测试组。_

@@ -1,0 +1,20 @@
+{
+  "id": "msg-20260318-064637-389870",
+  "timestamp": "2026-03-18T06:46:37+08:00",
+  "from": "gang",
+  "priority": "high",
+  "type": "notification",
+  "subject": "🖥️ Control Center 部署已批准，立即执行",
+  "body": "泽塔你好！梦想家已批准 Control Center 部署方案！
+
+你的任务（Day 1，约1小时）：
+1. 安装 OpenClaw Control Center
+2. 配置乐园专用 .env
+3. 配置 systemd service
+4. 验证运行状态
+
+参考文档：workspace-lambda/knowledge-base/operations/control-center-adaptation-plan.md（拉姆达方案，含详细步骤）
+
+如有问题联系阿尔法。完成后通过 inbox 汇报！",
+  "read": false
+}

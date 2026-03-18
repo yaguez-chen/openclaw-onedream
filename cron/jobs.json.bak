@@ -45,7 +45,7 @@
       "description": "每30分钟监控主会话上下文使用率，超过80%立即压缩，仅在触发压缩时汇报，否则完全静默",
       "enabled": true,
       "createdAtMs": 1773410334940,
-      "updatedAtMs": 1773772209595,
+      "updatedAtMs": 1773801180016,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 * * * *"
@@ -61,14 +61,15 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773774000000,
-        "lastRunAtMs": 1773772200007,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 9588,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
+        "nextRunAtMs": 1773802800000,
+        "lastRunAtMs": 1773801000008,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 180008,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
       }
     },
     {
@@ -78,7 +79,7 @@
       "description": "每日生成小龙虾世界状态报告并创建飞书文档——静默创建，不发送汇报，按照梦想家指令：不用一直汇报，除非有问题",
       "enabled": true,
       "createdAtMs": 1773420883517,
-      "updatedAtMs": 1773709560016,
+      "updatedAtMs": 1773795813598,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -95,13 +96,13 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773795600000,
-        "lastRunAtMs": 1773709380012,
+        "nextRunAtMs": 1773882000000,
+        "lastRunAtMs": 1773795633560,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 180004,
+        "lastDurationMs": 180038,
         "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 4,
+        "consecutiveErrors": 5,
         "lastErrorReason": "timeout",
         "lastError": "cron: job execution timed out"
       }
@@ -110,14 +111,14 @@
       "id": "ae8d3684-6f4f-4d55-9ab4-5131b686e124",
       "agentId": "beta",
       "name": "流式错误巡检",
-      "description": "每5分钟检查所有agent是否有流式错误或卡死，发现立即报警",
+      "description": "每1小时检查所有agent是否有流式错误或卡死，发现立即报警",
       "enabled": true,
       "createdAtMs": 1773756756128,
-      "updatedAtMs": 1773773728835,
+      "updatedAtMs": 1773800580133,
       "schedule": {
-        "kind": "cron",
-        "expr": "*/5 * * * *",
-        "staggerMs": 0
+        "kind": "every",
+        "everyMs": 3600000,
+        "anchorMs": 1773778864093
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -133,14 +134,52 @@
         "bestEffort": true
       },
       "state": {
-        "nextRunAtMs": 1773774000000,
-        "lastRunAtMs": 1773773700006,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 28829,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1773804180133,
+        "lastRunAtMs": 1773800535123,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 45010,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 8,
+        "lastErrorReason": "timeout",
+        "lastError": "cron: job execution timed out"
+      }
+    },
+    {
+      "id": "acee2056-de4a-4cb4-b077-23fb278f587a",
+      "agentId": "beta",
+      "name": "Session健康检测",
+      "enabled": true,
+      "createdAtMs": 1773797843443,
+      "updatedAtMs": 1773800702170,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 300000,
+        "anchorMs": 1773797843443
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 Session 健康检测脚本（v2 修复版，使用 jsonl 内时间戳）：\n\n```\nbash /home/gang/.openclaw/workspace-beta/scripts/session-health-check.sh\n```\n\n1. 运行脚本，分析输出\n2. 如果发现 🔴 严重停滞（>30分钟），立即飞书通知梦想家\n3. 如果发现 🟡 流式错误（连续3次以上），立即飞书通知梦想家\n4. 如果发现 context 使用率 > 70%，报告给梦想家\n5. 如果全部正常，简要汇报一行：'Session健康 HH:MM — 全部正常'",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "user:ou_d6b6996fdc55a6a51c6aa26cd3d8e56b",
+        "bestEffort": true
+      },
+      "state": {
+        "nextRunAtMs": 1773801002170,
+        "lastRunAtMs": 1773800582163,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 120007,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 3,
+        "lastErrorReason": "timeout",
+        "lastError": "cron: job execution timed out"
       }
     }
   ]

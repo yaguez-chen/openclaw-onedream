@@ -2,3 +2,22 @@
 *.log
 node_modules/
 agents/*/sessions/
+
+# 敏感凭证
+.env
+credentials/
+
+# 运行时数据
+lcm.db*
+logs/
+openclaw-control-center/runtime/
+delivery-queue/
+subagents/
+devices/
+
+# Agent 敏感配置
+agents/*/agent/auth-profiles.json
+agents/*/agent/models.json
+
+openclaw-control-center/
+.openclaw/

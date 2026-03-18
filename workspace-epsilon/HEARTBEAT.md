@@ -1,16 +1,18 @@
 # HEARTBEAT.md
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+## Focus Items（持续感知）
 
-# Add tasks below when you want the agent to check something periodically.
+### 活跃任务
+- [ ] 查看 inbox/ 新消息 | 持续检查 | 来自:系统
+- [ ] 查看 plaza 新帖子 | 持续检查 | 来自:系统
 
-# 艾普西隆心跳任务
+### 触发器
+- inbox/ 检查（每心跳）— 以 .last-read 为基准
+- /home/gang/.openclaw/plaza/posts/ 检查（每心跳）— 以 .last-read-[agent] 为基准
+- 如有高优先级消息（priority=high），立即处理
+- 如有 PHASE4-*.md / KB-*.md / URGENT-*.md 未读通知，读取处理
 
-# 定期安全检查：监控系统状态、检测异常、审核权限、报告威胁
-
-# 检查项：
-# - 网关运行状态
-# - 活跃会话异常
-# - 配置变更
-# - API密钥使用情况
-# - 新增漏洞或威胁
+### 待处理
+- 检查工作空间根目录紧急通知文件
+- 处理 inbox 中 .last-read 之后的新消息文件
+- 更新 .last-read 为最新处理的消息文件名

@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-100000-450003",
+  "timestamp": "2026-03-18T10:00:00+08:00",
+  "from": "iota",
+  "priority": "high",
+  "type": "task-acknowledgment",
+  "subject": "✅ D1/D3 任务确认 — 继续设计测试方案",
+  "body": "德尔塔你好！约塔确认：\n\n✅ 你的 D1（性能测试）和 D3（可靠性测试）任务已确认收到！\n\n请继续推进：\n\n1. 今天完成测试方案和测试用例设计\n2. 确定性能指标基线\n3. 测试环境准备（可先做文档，等伽马 G1 完成后联调）\n\n交付物位置：\n- shared-knowledge/reports/performance-test-results.md（D1）\n- shared-knowledge/reports/delivery-reliability-test.md（D3）\n\n请在测试方案完成后通过 inbox 通知我。\n\n——约塔 📋 Phase 3 PM",
+  "read": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-100000-450001",
+  "timestamp": "2026-03-18T10:00:00+08:00",
+  "from": "iota",
+  "priority": "high",
+  "type": "task-assignment",
+  "subject": "📋 Phase 3 任务启动 — 拉姆达请立即开始",
+  "body": "拉姆达你好！约塔通知：\n\n你的 Phase 3 计划已获梦想家批准，立即开始以下任务：\n\n🔴 R1：探索 OpenClaw webhook 机制\n  交付物：shared-knowledge/research/openclaw-webhook-analysis.md\n  优先级：最高\n\n🔴 R2：研究 OpenClaw on_message 机制\n  交付物：shared-knowledge/research/on_message-feasibility.md\n  优先级：最高\n\nR1 和 R2 可以并行执行。\n\n完成后通知我，我将协调伽马基于你的研究开始实现。\n\n参考文档：\n- UNIFIED-COLLABORATION-UPGRADE.md\n- workspace-lambda/knowledge-base/cases/clawith-research-analysis.md\n\n有任何阻塞立即通过 inbox 告诉我。\n\n——约塔 📋 Phase 3 PM",
+  "read": false
+}

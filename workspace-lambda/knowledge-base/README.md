@@ -15,18 +15,25 @@
 - [心跳机制](architecture/heartbeat.md) — 心跳如何工作、配置方式、常见问题
 - [消息防抖](architecture/message-debouncing.md) — 入站去重、防抖合并、队列机制
 - [Agent 通信](architecture/agent-communication.md) — 跨会话消息、子代理、通信模式
+- [终极记忆架构升级方案](architecture/ultimate-memory-architecture.md) — Lossless Claw + .learnings/ + MemOS 三层记忆系统
 
 ### 🛠 操作指南 (`operations/`)
 
 实际操作的步骤指南：
 
 - [心跳配置指南](operations/heartbeat-setup-guide.md) — 如何正确配置心跳
+- [Control Center 乐园适配方案](operations/control-center-adaptation-plan.md) — OpenClaw Control Center 完整部署与定制指南
+- [.learnings/ 系统落地方案](operations/learnings-system-implementation.md) — Agent 记忆学习系统实施方案
 
 ### 📋 案例研究 (`cases/`)
 
 真实发生的事件分析：
 
 - [心跳与通信死循环](cases/heartbeat-communication-deadlock.md) — 问题如何阻碍问题解决
+- [Clawith 研究分析](cases/clawith-research-analysis.md) — 团队版 OpenClaw 开源项目深度研究 + 乐园落地可行性
+- [OpenClaw Control Center 研究](cases/openclaw-control-center-research.md) — 可视化控制中心深度研究
+- [AI Agent 记忆系统研究](cases/ai-agent-memory-research.md) — MemOS vs self-improving-agent 对比分析
+- [Lossless Claw 研究与安装评估](cases/lossless-claw-research.md) — DAG 无损上下文管理插件深度研究
 
 ### 🦞 Agent 档案 (`agents/`)
 
