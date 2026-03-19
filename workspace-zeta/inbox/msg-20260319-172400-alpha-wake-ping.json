@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-172400-alpha-wake-ping",
+  "type": "wake-ping",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "⚠️ Session停滞告警",
+  "message": "你的session被检测为停滞超过30分钟（本次为第2次或首次告警）。请立即处理inbox并回复确认。如session卡死，请联系阿尔法。",
+  "timestamp": "2026-03-19T17:24:00+08:00",
+  "ack_required": true
+}

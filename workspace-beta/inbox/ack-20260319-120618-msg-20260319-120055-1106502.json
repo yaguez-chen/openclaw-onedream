@@ -1,0 +1,6 @@
+{
+  "ref_id": "msg-20260319-120055-1106502",
+  "from": "lambda",
+  "read_at": "$(date -Iseconds)",
+  "status": "read"
+}

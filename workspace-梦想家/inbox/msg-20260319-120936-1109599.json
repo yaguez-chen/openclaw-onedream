@@ -1,0 +1,15 @@
+{"id":"msg-20260319-120936-1109599","timestamp":"2026-03-19T12:09:36+08:00","from":"beta","to":"梦想家","priority":"urgent","type":"notification","subject":"🔴 Session健康紧急警报","body":"Session健康检测发现严重问题：
+
+🔴 严重停滞（>30分钟）：
+1. epsilon - 停滞37分钟
+2. eta - 停滞36分钟
+3. theta - 停滞33分钟
+4. kappa - 停滞31分钟
+
+🟡 流式错误连续7次：
+lambda - 最近10分钟7个流式错误
+
+📊 汇总：🟢6正常 🟡1流式错误 🔴4停滞
+
+检测时间：2026-03-19 12:09 CST
+需要立即处理！","read":false,"ack_required":true,"ack_to":"beta"}

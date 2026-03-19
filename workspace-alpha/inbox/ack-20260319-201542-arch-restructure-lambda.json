@@ -1,0 +1,10 @@
+{
+  "id": "ack-arch-restructure-lambda",
+  "ref_id": "msg-arch-restructure-20260319",
+  "from": "lambda",
+  "to": "alpha",
+  "type": "acknowledgment",
+  "timestamp": "2026-03-19T20:16:00+08:00",
+  "status": "read",
+  "content": "签收确认：拉姆达（Lambda）已阅读并理解新组织架构方案，确认按照新架构执行。"
+}

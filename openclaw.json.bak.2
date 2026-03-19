@@ -1,12 +1,12 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-18T16:09:56.315Z"
+    "lastTouchedAt": "2026-03-18T16:26:59.274Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-18T15:49:11.330Z",
+    "lastRunAt": "2026-03-18T16:26:59.242Z",
     "lastRunVersion": "2026.3.11",
-    "lastRunCommand": "doctor",
+    "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "auth": {
@@ -65,8 +65,8 @@
               "cacheRead": 0,
               "cacheWrite": 0
             },
-            "contextWindow": 16000,
-            "maxTokens": 4096
+            "contextWindow": 262144,
+            "maxTokens": 8192
           }
         ]
       }
@@ -313,26 +313,21 @@
     "ownerDisplay": "raw"
   },
   "session": {
+    "reset": {
+      "mode": "idle",
+      "idleMinutes": 10080
+    },
     "dmScope": "per-channel-peer"
   },
   "hooks": {
-    "internal": {
-      "enabled": true,
-      "entries": {
-        "boot-md": {
-          "enabled": true
-        },
-        "bootstrap-extra-files": {
-          "enabled": true
-        },
-        "command-logger": {
-          "enabled": true
-        },
-        "session-memory": {
-          "enabled": true
-        }
-      }
-    }
+    "enabled": true,
+    "token": "8d54e4627c496b7c2c0fc8abab6fa5a8cbf4ddbb85cfa42e39b83c30e6b4d9a3",
+    "path": "/hooks",
+    "allowRequestSessionKey": true,
+    "allowedSessionKeyPrefixes": [
+      "hook:"
+    ],
+    "defaultSessionKey": "hook:ingress"
   },
   "channels": {
     "feishu": {
@@ -403,7 +398,8 @@
         "lambda": {
           "appId": "cli_a93cc73fecb8dcbb",
           "appSecret": "eFnZl3fHxMPMwdTLiOrB3d6cw1INHPFc",
-          "botName": "拉姆达"
+          "botName": "拉姆达",
+          "model": "mimo-claw-0301"
         }
       }
     }
@@ -442,9 +438,15 @@
         "config": {
           "freshTailCount": 32,
           "contextThreshold": 0.75,
-          "incrementalMaxDepth": -1
+          "incrementalMaxDepth": -1,
+          "leafMinFanout": 8,
+          "condensedMinFanout": 4,
+          "summaryModel": "xiaomi/mimo-v2-flash"
         }
       }
+    },
+    "slots": {
+      "contextEngine": "lossless-claw"
     },
     "installs": {
       "lossless-claw": {

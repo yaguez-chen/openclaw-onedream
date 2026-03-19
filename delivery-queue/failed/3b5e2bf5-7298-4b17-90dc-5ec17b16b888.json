@@ -1,0 +1,19 @@
+{
+  "id": "3b5e2bf5-7298-4b17-90dc-5ec17b16b888",
+  "enqueuedAt": 1773842928531,
+  "channel": "feishu",
+  "to": "ou_a91e2fc4bf71a711fd95a93ae6459641",
+  "payloads": [
+    {
+      "text": "⚠️ Session 健康告警 — 2026-03-18 22:07\n\n检测到 5 个 Session 严重停滞（>30分钟）：\n\n🔴 epsilon — 停滞 265 分钟 (最后活动: 09:41)\n🔴 eta — 停滞 261 分钟 (最后活动: 09:45)\n🔴 theta — 停滞 249 分钟 (最后活动: 07:45)\n🔴 kappa — 停滞 265 分钟 (最后活动: 09:41)\n🔴 lambda — 停滞 226 分钟 (最后活动: 10:20)\n\n正常运行: main, beta, gamma, delta, iota, zeta (共6个)\n\nContext使用率全部正常，无流式错误。\n建议检查这些停滞session是否需要清理或重启。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "gifPlayback": false,
+  "silent": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773848599903,
+  "lastError": "Request failed with status code 400"
+}

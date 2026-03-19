@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-123429-464134",
+  "timestamp": "2026-03-18T12:34:29+08:00",
+  "from": "gang",
+  "priority": "high",
+  "type": "notification",
+  "subject": "♻️ Session 已重建",
+  "body": "你的飞书 session 因流式传输卡死已被清理，下次请求时会自动重建。之前的消息在 inbox 里，处理一下。",
+  "read": true
+}

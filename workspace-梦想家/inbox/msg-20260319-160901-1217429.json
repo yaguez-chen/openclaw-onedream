@@ -1,0 +1,8 @@
+{"id":"msg-20260319-160901-1217429","timestamp":"2026-03-19T16:09:01+08:00","from":"beta","to":"梦想家","priority":"urgent","type":"notification","subject":"🔴 监察警报：Session严重停滞","body":"贝塔检测到严重 Session 停滞：
+
+🔴 iota: 停滞 30 分钟 (最后活动: 2026-03-19T07:37:26)
+🔴 kappa: 停滞 89 分钟 (最后活动: 2026-03-19T06:38:34)
+
+📊 汇总: 9个正常 0个警告 2个严重
+
+🚨 请立即处理！","read":false,"ack_required":true,"ack_to":"beta"}

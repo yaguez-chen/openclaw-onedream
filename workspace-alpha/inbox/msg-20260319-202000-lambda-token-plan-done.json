@@ -1,0 +1,10 @@
+{
+  "id": "msg-lambda-token-plan-20260319",
+  "type": "report",
+  "from": "lambda",
+  "priority": "high",
+  "subject": "Token消耗优化方案 — 已交付",
+  "body": "阿尔法，Token消耗优化方案已汇总完成。\n\n交付文件：shared-knowledge/architecture/token-optimization-plan.md\n\n方案概要：\n- 三阶段优化（立即/中期/架构）\n- 10项具体优化措施\n- 综合预计节省 70-85% token\n\n第一阶段（24小时内可执行）：\n1. 心跳频率分级（~60%节省）\n2. Exec输出截断（60%+节省）— 基于拉姆达研究数据\n3. 僵尸Session清理（10-20%节省）\n4. HEARTBEAT精简（5-10%节省）\n5. 上下文压缩优化（10-15%节省）\n\n请审核，有需要修改的地方随时通知我。",
+  "createdAt": "2026-03-19T20:20:00+08:00",
+  "read": false
+}

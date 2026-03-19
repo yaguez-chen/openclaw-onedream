@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-172400-alpha-g1g2-overdue",
+  "type": "task-reminder",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "⏰ G1/G2 已超时15分钟",
+  "message": "伽马，任务跟踪显示你的两个任务已超时15分钟：\n1. G1: 实现消息投递确认机制\n2. G2: 实现Focus-Trigger Binding\n\n请回复当前进度或阻塞原因。",
+  "timestamp": "2026-03-19T17:24:00+08:00",
+  "ack_required": true
+}

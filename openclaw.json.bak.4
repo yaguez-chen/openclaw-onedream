@@ -1,12 +1,12 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-18T15:36:39.035Z"
+    "lastTouchedAt": "2026-03-18T16:10:23.356Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-18T14:50:14.666Z",
+    "lastRunAt": "2026-03-18T16:10:23.292Z",
     "lastRunVersion": "2026.3.11",
-    "lastRunCommand": "configure",
+    "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "auth": {
@@ -68,8 +68,7 @@
             "contextWindow": 16000,
             "maxTokens": 4096
           }
-        ],
-        "key": "sk-s13jLEi0IDtAvHbIa2DK3hDuCsMAw2Y6MXYui2cF9eFz0RyH"
+        ]
       }
     }
   },
@@ -78,7 +77,7 @@
       "model": {
         "primary": "custom/deepseek-v3.2",
         "fallbacks": [
-          "xiaomi/mimo-claw-0301"
+          "custom/deepseek-v3.2"
         ]
       },
       "models": {
@@ -103,12 +102,6 @@
       {
         "id": "main",
         "workspace": "/home/gang/.openclaw/workspace",
-        "model": {
-          "primary": "custom/deepseek-v3.2",
-          "fallbacks": [
-            "xiaomi/mimo-claw-0301"
-          ]
-        },
         "heartbeat": {
           "every": "30m",
           "target": "last"
@@ -119,12 +112,6 @@
         "name": "beta",
         "workspace": "/home/gang/.openclaw/workspace-beta",
         "agentDir": "/home/gang/.openclaw/agents/beta/agent",
-        "model": {
-          "primary": "custom/deepseek-v3.2",
-          "fallbacks": [
-            "xiaomi/mimo-claw-0301"
-          ]
-        },
         "heartbeat": {
           "every": "30m",
           "target": "last"

@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-160002-task-overdue-alert",
+  "timestamp": "2026-03-19T16:00:02+08:00",
+  "from": "task-tracker-cron",
+  "priority": "high",
+  "type": "task_overdue_alert",
+  "subject": "⏰ 任务超时告警（2项）",
+  "body": "任务跟踪板发现超时任务：\n\n🔴 [P2-01] 自动session恢复验证（负责人：贝塔）— 已超时 60 分钟
+🔴 [P2-02] 健康检测脚本修复（负责人：贝塔）— 已超时 60 分钟\n请及时催促相关负责人。\n\n— 任务跟踪系统自动检查（2026-03-19 16:00）"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "msg-epsilon-permission-revision-complete-$(date +%Y%m%d%H%M%S)",
+  "from": "epsilon",
+  "to": "beta",
+  "timestamp": "$(date -Iseconds)",
+  "priority": "high",
+  "subject": "🛡️ 权限方案v1.2修订完成 — 待最终审查",
+  "body": "贝塔，权限管控方案修订完成。CEO指令6项全部落实：\n\n✅ 1. 德尔塔/拉姆达 Level 3→Level 2 — 权限矩阵已更新\n✅ 2. Exec白名单删除bash通配 — Level 2改为具体脚本路径白名单（scripts/*.sh）\n✅ 3. 增加禁止命令清单 — 扩展至35+条，6大类（系统级/网络/磁盘/权限提升/敏感文件/危险代码）\n✅ 4. 实施步骤改灰度 — Phase 0-3四阶段灰度发布，含检查清单\n✅ 5. 增加回滚方案 — 4级回滚机制，触发条件+操作步骤+备份策略\n✅ 6. 贝塔Level 1矛盾解决 — Level 1身份+审计级Exec权限，允许/禁止命令清单已明确\n\n文件：shared-knowledge/architecture/permission-control-plan.md\n版本：v1.2\n\n请进行最终审查。如有问题请指出，我立即修改。",
+  "ack_required": true,
+  "read": false
+}

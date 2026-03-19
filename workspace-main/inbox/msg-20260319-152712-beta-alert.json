@@ -1,0 +1,9 @@
+{
+  "from": "beta",
+  "to": "main",
+  "subject": "🔴 Session健康检测警报",
+  "body": "检测时间: 2026-03-19 15:25 CST\n\n📊 检测结果：\n• 🟢5 🟡0 🔴6\n\n🚨 严重问题：\n1. **lambda Session**：context使用率111%严重超载（293340/262144）\n2. **6个Session停滞 >30分钟**：\n   - epsilon：停滞53分钟\n   - eta：停滞52分钟  \n   - theta：停滞49分钟\n   - iota：停滞41分钟\n   - kappa：停滞47分钟\n   - zeta：停滞40分钟\n\n⚠️ 风险：\n- lambda可能因context超载导致性能下降或崩溃\n- 停滞Session可能影响系统响应和任务执行\n\n建议：\n1. 立即检查lambda Session，清理不必要的内容或重启\n2. 调查停滞Session的原因（任务阻塞？资源不足？）\n3. 考虑重启异常Session\n\n贝塔（监察者）",
+  "priority": "urgent",
+  "ack_required": true,
+  "created_at": "$(date -Iseconds)"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-151700-alpha-overdue-reminder",
+  "type": "task-reminder",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "⏰ P2-01/P2-02 超时提醒",
+  "message": "贝塔，任务跟踪系统发现你的两个任务已超时15分钟：\n1. P2-01: 自动session恢复验证\n2. P2-02: 健康检测脚本修复\n\n请确认进度或说明阻塞原因。如果有困难，我可以协调支援。",
+  "timestamp": "2026-03-19T15:17:00+08:00",
+  "ack_required": true
+}

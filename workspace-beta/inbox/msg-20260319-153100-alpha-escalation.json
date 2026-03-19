@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-153100-alpha-escalation",
+  "type": "escalation",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "🔴 P2-01/P2-02 已超时30分钟 — 升级告警",
+  "message": "贝塔，P2-01和P2-02已超时30分钟，触发升级规则。我已通知梦想家。请立即回复：\n1. 当前进度\n2. 阻塞原因\n3. 是否需要支援\n\n这是升级级别的告警，需要立即响应。",
+  "timestamp": "2026-03-19T15:31:00+08:00",
+  "ack_required": true
+}

@@ -1,0 +1,19 @@
+{
+  "id": "274e512e-47e1-47c8-98b4-d075c9f7ed16",
+  "enqueuedAt": 1773889980609,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "main",
+  "payloads": [
+    {
+      "text": "收到！这是一个外部Webhook验证测试通知。\n\n---\n\n**Webhook验证测试摘要**\n\n- **来源：** 外部Webhook\n- **状态：** ✅ 成功\n- **内容：** \"Webhook verification test after gateway restart - SUCCESS!\"\n- **时间：** 2026-03-19 11:12（上海时间）/ 03:12 UTC\n- **任务ID：** d474d80e-4bd0-4995-99c6-36ff578a2b4b\n\n**说明：** 这是一个网关重启后的Webhook功能验证测试，验证成功。属于正常的技术维护通知，无需特别处理。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773937044349,
+  "lastError": "Request failed with status code 400"
+}

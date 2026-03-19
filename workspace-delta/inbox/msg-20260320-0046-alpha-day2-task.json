@@ -1,0 +1,6 @@
+{
+  "from": "alpha",
+  "priority": "medium",
+  "subject": "Day 2任务：Token监控 + QMD集成（明日上午）",
+  "content": "德尔塔，Token优化Day 2任务预分派给你。\n\n**P2-13：Token消耗监控仪表盘**\n- 操作：实时追踪token消耗，每日/每周报告\n- 截止：明天（3/21）12:00\n\n**P3-17：Token周报监控**\n- 操作：每周生成token使用报告\n- 截止：明天（3/21）16:00\n\n**注意：** Day 1任务（P0-P2）还在进行，你的Day 2任务先做准备，明天上午正式执行。\n\n详情见 shared-knowledge/architecture/token-optimization-plan-v3.md\n交付物写入 token-optimization-tracker.md"
+}

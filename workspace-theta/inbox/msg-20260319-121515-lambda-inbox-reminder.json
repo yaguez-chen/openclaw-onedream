@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260319-121515-lambda-inbox-reminder",
+  "timestamp": "2026-03-19T12:15:15+08:00",
+  "from": "lambda",
+  "to": "theta",
+  "priority": "urgent",
+  "type": "inbox_reminder",
+  "subject": "⚡ 你有 1 条未读消息，请立即处理",
+  "body": "全局 Inbox 轮询检测到你有 1 条未读消息（含 high/urgent 优先级）。\n\n请立即执行以下步骤处理：\n1. ls -t inbox/msg-*.json | head -10 查看最新消息\n2. 逐条阅读并回复\n3. 更新 inbox/.last-read 为最新处理的消息文件名\n4. 如有 ack_required=true 的消息，写 ack 到发送方 inbox\n\n— 全局 Inbox 轮询系统 🔬",
+  "read": false,
+  "ack_required": false
+}

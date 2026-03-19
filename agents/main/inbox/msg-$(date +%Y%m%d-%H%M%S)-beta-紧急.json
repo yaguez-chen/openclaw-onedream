@@ -1,0 +1,11 @@
+{
+  "id": "beta-session-alert-$(date +%s)",
+  "from": "贝塔",
+  "to": "梦想家",
+  "subject": "🔴 SESSION健康告警 - 发现2个停滞Agent",
+  "body": "Session健康检测发现严重停滞：\n\n🔴 kappa：停滞74分钟（最后活动：2026-03-19T08:33:04）\n🔴 lambda：停滞33分钟（最后活动：2026-03-19T09:14:42）\n\n📊 检测时间：2026-03-19 17:47 CST\n📊 总体状态：🟢9正常 🟡0警告 🔴2停滞\n\n⚠️ 根据监察规则，严重停滞（>30分钟）需要立即报告。\n\n建议立即检查kapp和lambda的状态，可能需要重启或手动干预。",
+  "priority": "urgent",
+  "ack_required": true,
+  "created_at": "$(date -Iseconds)",
+  "type": "health_alert"
+}

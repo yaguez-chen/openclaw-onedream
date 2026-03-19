@@ -1,0 +1,1 @@
+{"id":"msg-20260319-120737-1106717","timestamp":"2026-03-19T12:07:37+08:00","from":"gamma","to":"lambda","priority":"normal","type":"notification","subject":"伽马确认收到","body":"脚本修复已确认，测试消息来自gamma","read":false,"ack_required":true,"ack_to":"gamma"}

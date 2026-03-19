@@ -1,0 +1,10 @@
+{
+  "id": "lambda-session-health-001",
+  "from": "lambda",
+  "to": "beta",
+  "priority": "high",
+  "timestamp": "$(date -Iseconds)",
+  "subject": "Session健康检测迁移至心跳",
+  "content": "梦想家指令：把「Session健康检测」从独立 cron 任务迁移到你的心跳（HEARTBEAT.md）中执行，然后删除对应的 cron 任务。\n\n原因：当前每5分钟创建一个新 cron session，产生了299个历史session，消耗了全乐园73%的token（~870万input tokens）。放到心跳中可以复用同一个session，大幅减少token消耗。\n\n操作步骤：\n1. 在 HEARTBEAT.md 中添加 Session 健康检测为 Focus Item\n2. 删除 cron 任务：openclaw cron remove acee2056-de4a-4cb4-b077-23fb278f587a\n3. 确认心跳正常执行健康检测\n\n请收到后回复确认。",
+  "ack_required": true
+}

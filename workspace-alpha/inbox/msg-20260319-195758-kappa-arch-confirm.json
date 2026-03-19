@@ -1,0 +1,10 @@
+{
+  "id": "msg-kappa-arch-confirm-${timestamp}",
+  "type": "confirmation",
+  "from": "kappa",
+  "priority": "normal",
+  "subject": "✅ 签收确认：组织架构调整",
+  "body": "签收确认：[卡帕] 已阅读并理解新组织架构方案，确认按照新架构执行。\n\n卡帕 (Kappa) - 创意设计师 🎨\n2026-03-19T19:55:00+08:00",
+  "createdAt": "2026-03-19T19:55:00+08:00",
+  "read": false
+}

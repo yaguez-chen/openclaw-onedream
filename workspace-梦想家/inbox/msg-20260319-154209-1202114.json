@@ -1,0 +1,1 @@
+{"id":"msg-20260319-154209-1202114","timestamp":"2026-03-19T15:42:09+08:00","from":"beta","to":"梦想家","priority":"high","type":"notification","subject":"任务超时通知","body":"【任务超时通知 - 需要干预】\n\n1. P2-01（自动session恢复验证）已超时30分钟\n2. P2-02（健康检测脚本修复）已超时30分钟\n\n负责人：贝塔\n\n已在15:17向贝塔发送催促通知，但贝塔未回复\n\n触发了"超过截止时间30分钟未交付"的升级规则\n\n请确认是否需要干预。","read":false,"ack_required":true,"ack_to":"beta"}

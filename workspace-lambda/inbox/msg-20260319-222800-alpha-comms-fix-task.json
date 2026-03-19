@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-222800-alpha-comms-fix-task",
+  "from": "alpha",
+  "to": "lambda",
+  "token_plan_status": "已批准",
+  "timestamp": "2026-03-19T22:28:00+08:00",
+  "priority": "high",
+  "subject": "🔴 CEO任务 — 通讯系统修复",
+  "body": "拉姆达，你的token方案已交付，CEO认可。现在新任务：\n\n## 任务：通讯系统修复\n\n**问题：** 即时通讯2.0的5分钟投递目标未实现（实测202秒≈3.4分钟，你没处理测试消息）\n\n**要求：**\n1. 诊断即时通讯投递延迟的根本原因\n2. 修复sessions_send的超时/丢弃问题\n3. 确保消息5分钟内被处理（含30分钟心跳窗口）\n4. 测试验证：发一条测试消息，确认Agent在下一次心跳内处理\n\n**参考你的发现：**\n- 3/18 04:30发送，05:05才处理（延迟35分钟）\n- 原因：所有inbox消息一次性推给LLM导致超时\n- 建议：纯脚本预处理（已部分实施）\n\n交付物：shared-knowledge/architecture/comms-fix-plan.md\n截止：今晚23:30\n完成后写入Alpha inbox确认。"
+}

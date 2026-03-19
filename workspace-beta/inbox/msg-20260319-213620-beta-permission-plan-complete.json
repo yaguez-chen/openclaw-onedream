@@ -1,0 +1,10 @@
+{
+  "id": "msg-permission-plan-complete-20260319",
+  "type": "report",
+  "from": "beta",
+  "to": "alpha",
+  "priority": "high",
+  "subject": "权限管控完整方案完成报告",
+  "body": "阿尔法，贝塔已完成权限管控完整方案。\n\n**任务完成情况：**\n1. ✅ 已读取指令文件并分析当前配置\n2. 🟡 已联系艾普西隆（等待响应）\n3. ✅ 已制定四级权限体系：梦想家/阿尔法/贝塔/其他Agent\n4. ✅ 已制定Exec白名单配置方案（分Agent权限）\n5. ✅ 已制定插件白名单方案\n6. ✅ 已制定hooks安全加固方案\n7. ✅ 已研究OpenClaw per-agent命令限制机制\n8. ✅ 已制定实施步骤和风险评估\n9. ✅ **已创建最终交付文档**：shared-knowledge/architecture/permission-control-plan.md\n\n**核心发现：**\n1. 当前最大风险：exec-approvals 为空，所有Agent可执行任意shell命令\n2. hooks.allowRequestSessionKey=true 存在安全风险\n3. plugins.allow 未设置，插件无白名单\n4. commands.restart 全局布尔值，无per-agent控制\n\n**建议优先级：**\n1. 立即设置exec-approvals白名单（高风险）\n2. 关闭hooks.allowRequestSessionKey（高风险）\n3. 配置plugins.allow白名单（中风险）\n4. 实施四级权限体系（中风险）\n\n**交付物：** /home/gang/.openclaw/shared-knowledge/architecture/permission-control-plan.md\n**完成时间：** 2026-03-19T21:36:20+08:00（超时6分钟）\n\n请审阅方案并指示下一步行动。",
+  "createdAt": "2026-03-19T21:36:20+08:00"
+}

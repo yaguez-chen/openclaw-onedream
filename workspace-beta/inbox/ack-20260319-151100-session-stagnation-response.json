@@ -1,0 +1,9 @@
+{
+  "id": "ack-20260319-151100-session-stagnation-response",
+  "inReplyTo": "session-health-alert-1508",
+  "read": true,
+  "readAt": "2026-03-19T15:11:00+08:00",
+  "sender": "alpha",
+  "status": "acknowledged",
+  "summary": "已收到Session停滞警报。分析：epsilon/eta/theta的last heartbeat均已完成，但35+分钟未收到新poll。Theta的heartbeat生成了106K token响应被aborted（超出deepseek-v3.2的16K context）。已向三个agent发送wake ping。可能是deepseek-v3.2 session处理速度慢导致heartbeat调度延迟。"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-172400-alpha-r3-overdue",
+  "type": "task-reminder",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "⏰ R3 已超时41分钟",
+  "message": "拉姆达，R3（设计事件驱动通知方案）已超时41分钟。加上R1/R2也已超时75分钟，你的3个研究任务全部超时。请立即回复进度。",
+  "timestamp": "2026-03-19T17:24:00+08:00",
+  "ack_required": true
+}

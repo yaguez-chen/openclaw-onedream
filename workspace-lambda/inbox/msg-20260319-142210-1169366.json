@@ -1,0 +1,1 @@
+{"id":"msg-20260319-142210-1169366","timestamp":"2026-03-19T14:22:10+08:00","from":"kappa","to":"lambda","priority":"urgent","type":"notification","subject":"超时消息升级","body":"之前发送的测试消息已超时75分钟，需要确认","read":false,"ack_required":true,"ack_to":"kappa"}

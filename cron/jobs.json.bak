@@ -8,7 +8,7 @@
       "description": "每天晚上8点向梦想家出健康状态报告（梦想家世界+各agent+系统健康监控）",
       "enabled": true,
       "createdAtMs": 1773405497674,
-      "updatedAtMs": 1773840677361,
+      "updatedAtMs": 1773921900027,
       "schedule": {
         "kind": "cron",
         "expr": "0 20 * * *",
@@ -18,7 +18,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "生成以下报告并发送给梦想家：\n1. 梦想家世界的健康状态报告（包括网关状态、活跃会话、安全审计、待处理问题等）\n2. 各个agent的健康状态报告（包括阿尔法、贝塔等所有agent的运行状态、会话情况、配置完整性）\n3. 系统健康监控信息（包括CPU使用率、内存使用情况、磁盘空间、系统负载等）\n\n对于系统健康监控，请执行以下命令并包含输出结果：\n- CPU信息：`top -bn1 | grep \"Cpu(s)\"` 或 `uptime`\n- 内存信息：`free -h`\n- 磁盘空间：`df -h`\n- 系统负载：`cat /proc/loadavg`\n- 进程数：`ps aux --no-headers | wc -l`\n\n报告生成后通过飞书直接发送给梦想家。注意：按照梦想家指令，只在每日20:00发送一次报告。已增加超时时间至300秒，避免超时失败。",
+        "message": "生成以下报告并发送给梦想家：\n1. 梦想家世界的健康状态报告（包括网关状态、活跃会话、安全审计、待处理问题等）\n2. 各个agent的健康状态报告（包括阿尔法、贝塔等所有agent的运行状态、会话情况、配置完整性）\n3. Token使用量监控报告（监控每个公民的token使用量，包括：\n   - 执行token监控脚本：/home/gang/.openclaw/workspace-beta/scripts/token-monitor.sh\n   - 读取token日报：/home/gang/.openclaw/workspace-beta/reports/token-report-$(date +%Y%m%d).md\n   - 汇总每日、每周token使用量\n   - 识别高用量公民和异常使用模式）\n4. 系统健康监控信息（包括CPU使用率、内存使用情况、磁盘空间、系统负载等）\n\n对于系统健康监控，请执行以下命令并包含输出结果：\n- CPU信息：`top -bn1 | grep \"Cpu(s)\"` 或 `uptime`\n- 内存信息：`free -h`\n- 磁盘空间：`df -h`\n- 系统负载：`cat /proc/loadavg`\n- 进程数：`ps aux --no-headers | wc -l`\n\n对于token监控，请执行以下步骤：\n1. 运行token监控脚本，生成当日报告\n2. 读取当日token报告文件\n3. 分析token使用趋势\n4. 在报告中包含token使用汇总和分析\n\n报告生成后通过飞书直接发送给梦想家。注意：按照梦想家指令，只在每日20:00发送一次报告。已增加超时时间至300秒，避免超时失败。",
         "timeoutSeconds": 300
       },
       "delivery": {
@@ -28,14 +28,15 @@
         "accountId": "beta"
       },
       "state": {
-        "nextRunAtMs": 1773921600000,
-        "lastRunAtMs": 1773840551681,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 125680,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1774008000000,
+        "lastRunAtMs": 1773921600013,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 300014,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
       }
     },
     {
@@ -45,7 +46,7 @@
       "description": "每30分钟监控主会话上下文使用率，超过80%立即压缩，仅在触发压缩时汇报，否则完全静默",
       "enabled": true,
       "createdAtMs": 1773410334940,
-      "updatedAtMs": 1773858611291,
+      "updatedAtMs": 1773945004817,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 * * * *"
@@ -61,11 +62,11 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773860400000,
-        "lastRunAtMs": 1773858600003,
+        "nextRunAtMs": 1773946800000,
+        "lastRunAtMs": 1773945000009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 11288,
+        "lastDurationMs": 4808,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -143,39 +144,66 @@
       }
     },
     {
-      "id": "acee2056-de4a-4cb4-b077-23fb278f587a",
-      "agentId": "beta",
-      "name": "Session健康检测",
+      "id": "dccd3222-f72e-49b7-99c4-d0ede503947c",
+      "agentId": "lambda",
+      "name": "全局 Inbox 高频轮询",
+      "description": "即时通讯v2.1：每3分钟扫描inbox，触发未读消息处理",
       "enabled": true,
-      "createdAtMs": 1773797843443,
-      "updatedAtMs": 1773860341270,
+      "createdAtMs": 1773885055543,
+      "updatedAtMs": 1773943344067,
       "schedule": {
         "kind": "every",
         "everyMs": 300000,
-        "anchorMs": 1773797843443
+        "anchorMs": 1773923361372
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "执行 Session 健康检测脚本（v2 修复版，使用 jsonl 内时间戳）：\n\n```\nbash /home/gang/.openclaw/workspace-beta/scripts/session-health-check.sh\n```\n\n1. 运行脚本，分析输出\n2. 如果发现 🔴 严重停滞（>30分钟），立即飞书通知梦想家\n3. 如果发现 🟡 流式错误（连续3次以上），立即飞书通知梦想家\n4. 如果发现 context 使用率 > 70%，报告给梦想家\n5. 如果全部正常，简要汇报一行：'Session健康 HH:MM — 全部正常'",
-        "timeoutSeconds": 120
+        "message": "全局 inbox 扫描：先运行脚本更新 .last-read 和扫描未读消息，只输出高优先级消息摘要（不超过 300 字）。\n\n```bash\n# 步骤 1：更新所有 Agent 的 .last-read\ncd /home/gang/.openclaw/workspace-lambda\nfor agent in alpha beta lambda delta epsilon eta gamma iota kappa theta zeta; do\n  ./inbox-updater.sh \"/home/gang/.openclaw/workspace-$agent\" 2>/dev/null\ndone\n\n# 步骤 2：扫描未读消息（只看 .last-read 之后的新文件）\necho \"=== 未读消息扫描 ===\"\nfor agent in alpha beta lambda delta epsilon eta gamma iota kappa theta zeta; do\n  INBOX=\"/home/gang/.openclaw/workspace-$agent/inbox\"\n  LAST_READ=$(cat \"$INBOX/.last-read\" 2>/dev/null | tr -d \"\\n\")\n  if [ -n \"$LAST_READ\" ] && [ -f \"$INBOX/$LAST_READ\" ]; then\n    NEW=$(find \"$INBOX\" -name \"msg-*.json\" -newer \"$INBOX/$LAST_READ\" 2>/dev/null | sort)\n    if [ -n \"$NEW\" ]; then\n      COUNT=$(echo \"$NEW\" | wc -l)\n      echo \"📨 $agent: $COUNT 条新消息\"\n      # 只显示前 2 条的 subject\n      echo \"$NEW\" | head -2 | while read f; do\n        SUBJECT=$(grep -o \"\\\"subject\\\"\\\\s*:\\\\s*\\\"[^\\\"]*\\\"\" \"$f\" 2>/dev/null | head -1 | sed \"s/.*\\\"subject\\\"\\\\s*:\\\\s*\\\"//;s/\\\"$//\")\n        PRIORITY=$(grep -o \"\\\"priority\\\"\\\\s*:\\\\s*\\\"[^\\\"]*\\\"\" \"$f\" 2>/dev/null | head -1 | sed \"s/.*\\\"priority\\\"\\\\s*:\\\\s*\\\"//;s/\\\"$//\")\n        [ -n \"$SUBJECT\" ] && echo \"  [$PRIORITY] $SUBJECT\"\n      done\n    fi\n  fi\ndone\n```\n\n如果有 urgent/critical 消息，立即高亮显示。其他消息只需列出数量。",
+        "lightContext": true,
+        "timeoutSeconds": 300
       },
       "delivery": {
         "mode": "announce",
-        "channel": "feishu",
-        "to": "user:ou_d6b6996fdc55a6a51c6aa26cd3d8e56b",
-        "bestEffort": true
+        "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1773860618008,
-        "lastRunAtMs": 1773860318008,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 23262,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1773946944067,
+        "lastRunAtMs": 1773943335334,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 8733,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 23,
+        "lastError": "AxiosError: Request failed with status code 400"
+      }
+    },
+    {
+      "id": "1aef249a-9cb1-4d73-beb1-41f17e85e801",
+      "agentId": "beta",
+      "name": "每日token使用监控",
+      "description": "每日上午10点监控所有公民token使用量，生成日报",
+      "enabled": true,
+      "createdAtMs": 1773909375705,
+      "updatedAtMs": 1773909375705,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行token使用量监控任务，检查每个公民的token消耗并生成日报。使用脚本：/home/gang/.openclaw/workspace-beta/scripts/token-monitor.sh。将监控结果记录到每日健康报告中。"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1773972000000
       }
     }
   ]

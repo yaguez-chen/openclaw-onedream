@@ -1,0 +1,10 @@
+{"id":"msg-20260319-154801-1207922","timestamp":"2026-03-19T15:48:01+08:00","from":"beta","to":"梦想家","priority":"urgent","type":"notification","subject":"⚠️ SESSION健康检测警报","body":"发现严重问题：
+
+🔴 **kappa会话停滞69分钟** (最后活动: 2026-03-19T06:38:34)
+⚠️ **lambda会话context使用率123%** (超过容量: 324425/262144)
+
+其他会话状态：
+🟢 10个会话正常
+🔴 1个会话停滞
+
+建议：立即检查kappa会话状态，可能需要重启或清理。lambda会话需关注context使用情况。","read":false,"ack_required":true,"ack_to":"beta"}

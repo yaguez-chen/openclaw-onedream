@@ -1,0 +1,68 @@
+#!/bin/bash
+# inbox-poller.sh — 全局 inbox 高频轮询
+# 每分钟扫描所有 agent 的 inbox，报告未读消息并触发处理
+set -uo pipefail
+
+BASE_DIR="/home/gang/.openclaw"
+AGENTS=(alpha beta gamma delta epsilon zeta eta theta iota kappa lambda gang)
+TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+TOTAL_UNREAD=0
+ALERTS=""
+
+for agent in "${AGENTS[@]}"; do
+  INBOX="${BASE_DIR}/workspace-${agent}/inbox"
+  LAST_READ_FILE="${INBOX}/.last-read"
+
+  [ -d "$INBOX" ] || continue
+
+  # 获取上次处理位置
+  LAST_READ=$(cat "$LAST_READ_FILE" 2>/dev/null || echo "")
+
+  # 查找未读消息（read: false 或无 read 字段的新消息）
+  UNREAD_FILES=()
+  if [ -n "$LAST_READ" ] && [ -f "${INBOX}/${LAST_READ}" ]; then
+    # 有 last-read 文件，找比它新的
+    while IFS= read -r f; do
+      UNREAD_FILES+=("$f")
+    done < <(find "$INBOX" -name "msg-*.json" -newer "${INBOX}/${LAST_READ}" 2>/dev/null | sort)
+  else
+    # 无 last-read，全部未读
+    while IFS= read -r f; do
+      UNREAD_FILES+=("$f")
+    done < <(ls -1 "$INBOX"/msg-*.json 2>/dev/null | sort)
+  fi
+
+  # 过滤出真正未读的消息（read: false）
+  ACTUALLY_UNREAD=()
+  for f in "${UNREAD_FILES[@]}"; do
+    # 检查是否 read: false 或没有 read 字段
+    if grep -q '"read"\s*:\s*false' "$f" 2>/dev/null || ! grep -q '"read"' "$f" 2>/dev/null; then
+      ACTUALLY_UNREAD+=("$f")
+    fi
+  done
+
+  UNREAD_COUNT=${#ACTUALLY_UNREAD[@]}
+  TOTAL_UNREAD=$((TOTAL_UNREAD + UNREAD_COUNT))
+
+  if [ "$UNREAD_COUNT" -gt 0 ]; then
+    ALERTS="${ALERTS}\n📨 ${agent}: ${UNREAD_COUNT} 条未读"
+    # 列出前 3 条未读消息的主题
+    for f in "${ACTUALLY_UNREAD[@]:0:3}"; do
+      SUBJECT=$(grep -o '"subject"\s*:\s*"[^"]*"' "$f" 2>/dev/null | head -1 | sed 's/.*"subject"\s*:\s*"//;s/"$//')
+      PRIORITY=$(grep -o '"priority"\s*:\s*"[^"]*"' "$f" 2>/dev/null | head -1 | sed 's/.*"priority"\s*:\s*"//;s/"$//')
+      FROM=$(grep -o '"from"\s*:\s*"[^"]*"' "$f" 2>/dev/null | head -1 | sed 's/.*"from"\s*:\s*"//;s/"$//')
+      [ -n "$SUBJECT" ] && ALERTS="${ALERTS}\n   └─ [${PRIORITY:-normal}] ${FROM:-unknown}: ${SUBJECT}"
+    done
+    [ "$UNREAD_COUNT" -gt 3 ] && ALERTS="${ALERTS}\n   └─ ... 还有 $((UNREAD_COUNT - 3)) 条"
+  fi
+done
+
+# 输出结果
+if [ "$TOTAL_UNREAD" -gt 0 ]; then
+  echo "📬 [$TIMESTAMP] 全局 Inbox 扫描完成 — 共 ${TOTAL_UNREAD} 条未读消息"
+  echo -e "$ALERTS"
+  exit 1  # 有未读消息，返回非零让 cron 知道有事
+else
+  echo "✅ [$TIMESTAMP] 全局 Inbox 扫描完成 — 无未读消息"
+  exit 0
+fi

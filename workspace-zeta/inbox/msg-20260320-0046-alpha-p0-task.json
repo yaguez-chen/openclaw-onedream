@@ -1,0 +1,6 @@
+{
+  "from": "alpha",
+  "priority": "high",
+  "subject": "P0任务：清理Beta cron session + Lambda轮询调整",
+  "content": "泽塔，你是P0任务负责人。\n\n**P0-2：清理Beta历史cron session**\n- 问题：297个cron session文件占5MB+\n- 操作：清理闲置超过24小时的cron session\n- 截止：今天上午11:00\n\n**P0-3：Lambda轮询间隔1m→5m**\n- 问题：1分钟轮询产生大量session\n- 操作：全局Inbox高频轮询改为5分钟\n- 截止：今天上午11:00\n\n**交付物：** 清理报告（清理了多少session、节省多少空间）\n写入 shared-knowledge/architecture/token-optimization-progress.md"
+}

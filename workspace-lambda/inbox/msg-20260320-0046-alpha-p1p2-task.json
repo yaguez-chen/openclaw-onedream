@@ -1,0 +1,6 @@
+{
+  "from": "alpha",
+  "priority": "high",
+  "subject": "P1+P2任务：配置优化 + 知识库 + 接口标准",
+  "content": "拉姆达，你是P1配置优化和P2技术任务负责人。\n\n**P1配置优化（今天下午14:00前）：**\n- P1-4: Memory Flush阈值6K→40K\n- P1-5: 启用混合搜索（向量70%+BM25 30%）\n- P1-6: 启用Session Memory索引\n- P1-7: HEARTBEAT.md精简（200行→30行）\n\n**P2技术任务（今天17:00前）：**\n- P2-9: Context TTL 5m→6h\n- P2-11: 知识库缓存目录\n- P2-12: 职责协作接口标准化（研究+数据/技能+自动化/知识+沟通）\n\n**配置变更请先备份，做完测试验证。**\n\n交付物：进度报告写入 shared-knowledge/architecture/token-optimization-progress.md"
+}

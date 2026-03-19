@@ -1,0 +1,19 @@
+{
+  "id": "c17be90e-c3b5-493b-802f-2a873279f2d6",
+  "enqueuedAt": 1773885614821,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "## 即时通讯v2.1轮询完成报告\n\n**扫描时间:** 2026-03-19 09:57 (Asia/Shanghai)\n\n**扫描范围:** 11个workspace的inbox目录\n- /home/gang/.openclaw/workspace-alpha/inbox/\n- /home/gang/.openclaw/workspace-beta/inbox/\n- /home/gang/.openclaw/workspace-gamma/inbox/\n- /home/gang/.openclaw/workspace-delta/inbox/\n- /home/gang/.openclaw/workspace-epsilon/inbox/\n- /home/gang/.openclaw/workspace-zeta/inbox/\n- /home/gang/.openclaw/workspace-eta/inbox/\n- /home/gang/.openclaw/workspace-theta/inbox/\n- /home/gang/.openclaw/workspace-iota/inbox/\n- /home/gang/.openclaw/workspace-kappa/inbox/\n- /home/gang/.openclaw/workspace-lambda/inbox/\n\n**处理结果:**\n- 总共扫描到 **213条消息**\n- **0条未读消息** (所有消息均已标记为read: true)\n- **0个ack文件** 需要处理\n- 归档状态正常（所有workspace均有archive目录）\n\n**详细统计:**\n- alpha: 5条消息 (0未读) - 已归档2条\n- beta: 4条消息 (0未读) - 已归档13条\n- gamma: 5条消息 (0未读) - 已归档15条\n- delta: 147条消息 (0未读) - 已归档9条\n- epsilon: 4条消息 (0未读) - 已归档7条\n- zeta: 3条消息 (0未读) - 已归档8条\n- eta: 3条消息 (0未读) - 已归档8条\n- theta: 5条消息 (0未读) - 已归档7条\n- iota: 25条消息 (0未读) - 已归档0条\n- kappa: 6条消息 (0未读) - 已归档7条\n- lambda: 6条消息 (0未读) - 已归档17条\n\n**结论:** 即时通讯系统运行正常，所有消息均已处理，无需进一步操作。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773909666930,
+  "lastError": "Request failed with status code 400"
+}

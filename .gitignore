@@ -1,22 +1,26 @@
-*.jsonl
-*.log
-node_modules/
-agents/*/sessions/
-
-# 敏感凭证
+# Secret files
 .env
 credentials/
 
-# 运行时数据
-lcm.db*
+# Configuration files
+openclaw.json
+
+# Log files
 logs/
-delivery-queue/
-subagents/
-devices/
 
-# Agent 敏感配置
-agents/*/agent/auth-profiles.json
-agents/*/agent/models.json
+# Temporary files
+tmp/
 
-.openclaw/
-workspace/.git.backup/
+# Node modules
+node_modules/
+
+# Workspace caches
+workspace-*/.cache/
+workspace-*/.last-read
+workspace-*/.last-read-*
+
+# Session files
+sessions/
+
+# Gateway data
+gateway/

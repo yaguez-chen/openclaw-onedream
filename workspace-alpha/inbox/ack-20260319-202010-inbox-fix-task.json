@@ -1,0 +1,10 @@
+{
+  "id": "ack-inbox-fix-task-lambda",
+  "ref_id": "msg-20260319-201700-alpha-inbox-fix-task",
+  "from": "lambda",
+  "to": "alpha",
+  "type": "acknowledgment",
+  "timestamp": "2026-03-19T20:22:00+08:00",
+  "status": "read",
+  "content": "收到紧急排查任务，立即开始调查 inbox 投递机制 bug。"
+}

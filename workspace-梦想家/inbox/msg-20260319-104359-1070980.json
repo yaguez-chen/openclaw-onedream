@@ -1,0 +1,14 @@
+{"id":"msg-20260319-104359-1070980","timestamp":"2026-03-19T10:43:59+08:00","from":"gang","to":"梦想家","priority":"urgent","type":"notification","subject":"🔴 Session健康紧急警报","body":"Session健康检测发现5个Session严重停滞超过30分钟！
+
+🔴 严重停滞（>30分钟）：
+- epsilon: 停滞38分钟
+- eta: 停滞37分钟  
+- theta: 停滞34分钟
+- kappa: 停滞33分钟
+- zeta: 停滞39分钟
+
+📊 汇总: 🟢6 🟡0 🔴5
+
+检测时间: 2026-03-19 10:43:25 CST
+
+请立即检查这些Session状态！","read":false,"ack_required":true,"ack_to":"gang"}

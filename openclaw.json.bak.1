@@ -1,10 +1,10 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-18T16:10:23.356Z"
+    "lastTouchedAt": "2026-03-19T07:10:45.995Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-18T16:10:23.292Z",
+    "lastRunAt": "2026-03-18T16:26:59.242Z",
     "lastRunVersion": "2026.3.11",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
@@ -65,8 +65,8 @@
               "cacheRead": 0,
               "cacheWrite": 0
             },
-            "contextWindow": 16000,
-            "maxTokens": 4096
+            "contextWindow": 262144,
+            "maxTokens": 8192
           }
         ]
       }
@@ -86,7 +86,14 @@
       },
       "workspace": "/home/gang/.openclaw/workspace",
       "compaction": {
-        "mode": "safeguard"
+        "mode": "safeguard",
+        "model": "xiaomi/mimo-v2-flash",
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 6000,
+          "systemPrompt": "Session nearing compaction. Store durable memories now.",
+          "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store."
+        }
       },
       "timeoutSeconds": 180,
       "heartbeat": {
@@ -96,7 +103,27 @@
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
-      }
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "5m",
+        "keepLastAssistants": 3,
+        "softTrimRatio": 0.3,
+        "hardClearRatio": 0.5,
+        "minPrunableToolChars": 50000,
+        "softTrim": {
+          "maxChars": 4000,
+          "headChars": 1500,
+          "tailChars": 1500
+        },
+        "hardClear": {
+          "enabled": true,
+          "placeholder": "[Old tool result content cleared]"
+        }
+      },
+      "contextTokens": 200000,
+      "bootstrapMaxChars": 10000,
+      "bootstrapTotalMaxChars": 60000
     },
     "list": [
       {
@@ -313,22 +340,25 @@
     "ownerDisplay": "raw"
   },
   "session": {
-    "dmScope": "per-channel-peer"
+    "dmScope": "per-channel-peer",
+    "reset": {
+      "mode": "idle",
+      "idleMinutes": 10080
+    }
   },
   "hooks": {
+    "enabled": true,
+    "path": "/hooks",
+    "token": "8d54e4627c496b7c2c0fc8abab6fa5a8cbf4ddbb85cfa42e39b83c30e6b4d9a3",
+    "defaultSessionKey": "hook:ingress",
+    "allowRequestSessionKey": true,
+    "allowedSessionKeyPrefixes": [
+      "hook:"
+    ],
     "internal": {
       "enabled": true,
       "entries": {
-        "boot-md": {
-          "enabled": true
-        },
-        "bootstrap-extra-files": {
-          "enabled": true
-        },
-        "command-logger": {
-          "enabled": true
-        },
-        "session-memory": {
+        "startup-inbox-scan": {
           "enabled": true
         }
       }
@@ -403,7 +433,8 @@
         "lambda": {
           "appId": "cli_a93cc73fecb8dcbb",
           "appSecret": "eFnZl3fHxMPMwdTLiOrB3d6cw1INHPFc",
-          "botName": "拉姆达"
+          "botName": "拉姆达",
+          "model": "mimo-claw-0301"
         }
       }
     }
@@ -433,6 +464,9 @@
     }
   },
   "plugins": {
+    "slots": {
+      "contextEngine": "lossless-claw"
+    },
     "entries": {
       "feishu": {
         "enabled": true
@@ -442,7 +476,10 @@
         "config": {
           "freshTailCount": 32,
           "contextThreshold": 0.75,
-          "incrementalMaxDepth": -1
+          "incrementalMaxDepth": -1,
+          "leafMinFanout": 8,
+          "condensedMinFanout": 4,
+          "summaryModel": "xiaomi/mimo-v2-flash"
         }
       }
     },

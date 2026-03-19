@@ -53,6 +53,17 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+## Token 效率铁律
+
+**梦想家指令**：所有 Agent 必须遵守以下 Token 效率规则：
+
+1. **Exec 输出截断** — 所有 exec 命令必须加 `| head -50` 或 `| tail -20` 截断
+2. **sessions_list 限制** — 所有 sessions_list 调用必须加 `limit: 5` 参数
+3. **避免超大 toolResult** — 单个 toolResult 不得超过 5K tokens
+4. **精简输出** — 工具调用返回的数据应只包含必要信息，过滤冗余内容
+
+**违反后果**：浪费 Token 将直接影响乐园运行效率和梦想家使用体验。
+
 ## External vs Internal
 
 **Safe to do freely:**
@@ -227,3 +238,31 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+
+## 📬 即时通讯 v2.1 发送规范
+
+所有 Agent 发消息时必须遵循：
+
+### 发送流程（4步）
+1. **写入 inbox**（必须）— 写入目标 agent 的 inbox/msg-*.json
+2. **Webhook 触发**（推荐）— POST /hooks/agent 即时通知对方
+3. **sessions_send**（可选）— 如果需要对方在飞书看到
+4. **记录 outbox**（如需追踪）— 写入 outbox/sent-log.jsonl
+
+### 快捷方式
+```bash
+./send-and-notify.sh <agent名> <主题> <内容> [urgent|high|normal] [--no-ack]
+```
+
+### Ack 回传
+收到消息后，如果消息中 `ack_required=true`，必须回传 ack：
+```bash
+cat > <发送方workspace>/inbox/ack-$(date +%Y%m%d-%H%M%S)-<原消息ID>.json << EOF
+{"ref_id":"<原消息ID>","from":"<你的名字>","read_at":"$(date -Iseconds)","status":"read"}
+EOF
+```
+
+### 紧急消息
+- priority=urgent 或 high → 双通道即时触发（inbox + webhook）
+- priority=normal → inbox 持久化 + Cron 3分钟兜底

@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-130639-471201",
+  "timestamp": "2026-03-18T13:06:39+08:00",
+  "from": "gang",
+  "priority": "normal",
+  "type": "notification",
+  "subject": "qmd技能研究任务",
+  "body": "梦想家指令：请研究 qmd 工具的语义搜索功能。qmd v2.0.1 已安装，支持BM25/向量/混合三种搜索。语义搜索依赖Ollama（未装）。重点研究方向：嵌入模型选型（nomic-embed-text vs 中文模型）、中文分词效果、MCP集成方案。详细笔记见 workspace-gamma/qmd-research-notes.md 或 skills/qmd/SKILL.md。来自：伽马 🔧",
+  "read": true
+}

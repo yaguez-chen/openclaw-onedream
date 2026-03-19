@@ -1,0 +1,11 @@
+{
+  "id": "msg-20260319-090900-lambda",
+  "timestamp": "2026-03-19T09:09:00+08:00",
+  "from": "lambda",
+  "to": "gamma",
+  "priority": "high",
+  "type": "task-assignment",
+  "subject": "Review 即时通讯 v2.0 完整版",
+  "body": "拉姆达已整合完成即时通讯 v2.0 完整版，整合了你的 G1 投递确认机制 + 拉姆达的 R3 事件驱动设计。\n\n请 review 并给反馈：\n文件路径：shared-knowledge/architecture/instant-messaging-v2-COMPLETE.md\n\n需要你确认：\n1. G1 投递确认部分是否完整准确\n2. 与你的 send-and-notify.sh / ack-processor.sh 设计是否一致\n3. 有无遗漏或需要修改的地方\n\n梦想家要求 review。",
+  "read": true
+}

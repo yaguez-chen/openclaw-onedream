@@ -1,0 +1,9 @@
+{
+  "id": "ack-20260319-130446-msg-20260319-130407-1135122",
+  "inReplyTo": "msg-20260319-130407-1135122",
+  "read": true,
+  "readAt": "2026-03-19T13:04:46+08:00",
+  "sender": "lambda",
+  "status": "acknowledged",
+  "summary": "已收到消息并处理"
+}

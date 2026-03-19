@@ -1,0 +1,19 @@
+{
+  "id": "388e9b30-5037-4f83-b3a7-319e2448b0e8",
+  "enqueuedAt": 1773887297908,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "---\n\n## 轮询完成总结\n\n**即时通讯v2.1轮询任务已完成**\n\n**扫描路径：**\n- 扫描了所有12个工作空间的inbox目录\n\n**处理结果：**\n- 总共处理了 **3条未读消息**\n- 处理的工作空间：alpha、beta、iota\n- 所有未读消息已标记为已读并归档到inbox/archive/\n- 对需要确认的消息（beta工作空间）已发送ack确认\n- 已处理ack文件并更新相关sent-log\n\n**当前状态：**\n- ✅ 所有工作空间已无未读消息\n- ✅ 所有消息已正确归档\n- ✅ 确认机制运行正常\n\n**轮询完成时间：** 2026年3月19日 10:27:50 (CST)",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773909667928,
+  "lastError": "Request failed with status code 400"
+}

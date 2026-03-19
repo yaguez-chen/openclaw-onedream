@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "profiles": {
+    "xiaomi:default": {
+      "type": "api_key",
+      "provider": "xiaomi",
+      "key": "sk-ckwyhabdwcb5u8xohiyalr5lybw23dqydz00tyv6x5cgooqa"
+    },
+    "custom:default": {
+      "type": "api_key",
+      "provider": "custom",
+      "key": "sk-s13jLEi0IDtAvHbIa2DK3hDuCsMAw2Y6MXYui2cF9eFz0RyH"
+    }
+  },
+  "lastGood": {
+    "xiaomi": "xiaomi:default",
+    "custom": "custom:default"
+  },
+  "usageStats": {
+    "xiaomi:default": {
+      "errorCount": 0,
+      "lastUsed": 1773945188836
+    },
+    "custom:default": {
+      "errorCount": 0,
+      "lastUsed": 1773904226435
+    }
+  }
+}

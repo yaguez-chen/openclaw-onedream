@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-18T16:26:59.274Z"
+    "lastTouchedAt": "2026-03-19T10:20:50.837Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-18T16:26:59.242Z",
@@ -75,7 +75,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "custom/deepseek-v3.2",
+        "primary": "xiaomi/mimo-claw-0301",
         "fallbacks": [
           "custom/deepseek-v3.2"
         ]
@@ -85,12 +85,39 @@
         "custom/deepseek-v3.2": {}
       },
       "workspace": "/home/gang/.openclaw/workspace",
+      "bootstrapMaxChars": 10000,
+      "bootstrapTotalMaxChars": 60000,
+      "contextTokens": 200000,
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "5m",
+        "keepLastAssistants": 3,
+        "softTrimRatio": 0.3,
+        "hardClearRatio": 0.5,
+        "minPrunableToolChars": 50000,
+        "softTrim": {
+          "maxChars": 4000,
+          "headChars": 1500,
+          "tailChars": 1500
+        },
+        "hardClear": {
+          "enabled": true,
+          "placeholder": "[Old tool result content cleared]"
+        }
+      },
       "compaction": {
-        "mode": "safeguard"
+        "mode": "safeguard",
+        "model": "xiaomi/mimo-claw-0301",
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 6000,
+          "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
       },
       "timeoutSeconds": 180,
       "heartbeat": {
-        "every": "30m",
+        "every": "120m",
         "target": "last"
       },
       "maxConcurrent": 4,
@@ -113,7 +140,7 @@
         "workspace": "/home/gang/.openclaw/workspace-beta",
         "agentDir": "/home/gang/.openclaw/agents/beta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "60m",
           "target": "last"
         }
       },
@@ -123,7 +150,7 @@
         "workspace": "/home/gang/.openclaw/workspace-gamma",
         "agentDir": "/home/gang/.openclaw/agents/gamma/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -133,7 +160,7 @@
         "workspace": "/home/gang/.openclaw/workspace-delta",
         "agentDir": "/home/gang/.openclaw/agents/delta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -143,7 +170,7 @@
         "workspace": "/home/gang/.openclaw/workspace-iota",
         "agentDir": "/home/gang/.openclaw/agents/iota/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "60m",
           "target": "last"
         }
       },
@@ -153,7 +180,7 @@
         "workspace": "/home/gang/.openclaw/workspace-zeta",
         "agentDir": "/home/gang/.openclaw/agents/zeta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -163,7 +190,7 @@
         "workspace": "/home/gang/.openclaw/workspace-epsilon",
         "agentDir": "/home/gang/.openclaw/agents/epsilon/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "60m",
           "target": "last"
         }
       },
@@ -173,7 +200,7 @@
         "workspace": "/home/gang/.openclaw/workspace-eta",
         "agentDir": "/home/gang/.openclaw/agents/eta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -183,7 +210,7 @@
         "workspace": "/home/gang/.openclaw/workspace-theta",
         "agentDir": "/home/gang/.openclaw/agents/theta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -193,7 +220,7 @@
         "workspace": "/home/gang/.openclaw/workspace-kappa",
         "agentDir": "/home/gang/.openclaw/agents/kappa/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -203,13 +230,13 @@
         "workspace": "/home/gang/.openclaw/workspace-lambda",
         "agentDir": "/home/gang/.openclaw/agents/lambda/agent",
         "model": {
-          "primary": "custom/deepseek-v3.2",
+          "primary": "xiaomi/mimo-claw-0301",
           "fallbacks": [
-            "xiaomi/mimo-claw-0301"
+            "custom/deepseek-v3.2"
           ]
         },
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       }
@@ -309,26 +336,29 @@
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
-    "restart": true,
+    "restart": false,
     "ownerDisplay": "raw"
   },
   "session": {
-    "dmScope": "per-channel-peer"
+    "dmScope": "per-channel-peer",
+    "reset": {
+      "mode": "idle",
+      "idleMinutes": 10080
+    }
   },
   "hooks": {
+    "enabled": true,
+    "path": "/hooks",
+    "token": "8d54e4627c496b7c2c0fc8abab6fa5a8cbf4ddbb85cfa42e39b83c30e6b4d9a3",
+    "defaultSessionKey": "hook:ingress",
+    "allowRequestSessionKey": true,
+    "allowedSessionKeyPrefixes": [
+      "hook:"
+    ],
     "internal": {
       "enabled": true,
       "entries": {
-        "boot-md": {
-          "enabled": true
-        },
-        "bootstrap-extra-files": {
-          "enabled": true
-        },
-        "command-logger": {
-          "enabled": true
-        },
-        "session-memory": {
+        "startup-inbox-scan": {
           "enabled": true
         }
       }
@@ -429,11 +459,17 @@
         "contacts.add",
         "calendar.add",
         "reminders.add",
-        "sms.send"
+        "sms.send",
+        "system.run",
+        "shell.exec",
+        "process.spawn"
       ]
     }
   },
   "plugins": {
+    "slots": {
+      "contextEngine": "lossless-claw"
+    },
     "entries": {
       "feishu": {
         "enabled": true
@@ -443,7 +479,10 @@
         "config": {
           "freshTailCount": 32,
           "contextThreshold": 0.75,
-          "incrementalMaxDepth": -1
+          "incrementalMaxDepth": -1,
+          "leafMinFanout": 8,
+          "condensedMinFanout": 4,
+          "summaryModel": "xiaomi/mimo-claw-0301"
         }
       }
     },

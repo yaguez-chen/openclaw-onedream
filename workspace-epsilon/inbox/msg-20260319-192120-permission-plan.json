@@ -1,0 +1,10 @@
+{
+  "id": "msg-permission-plan-epsilon-20260319",
+  "type": "task",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "权限管控方案协作",
+  "body": "艾普西隆，梦想家指令：请配合贝塔一起完成权限管控完整方案。贝塔是主负责人，你作为安全官提供专业建议。\n\n请先读取工作空间中的 emergency-plans-2026-03-19.md（方案二：权限管控部分），然后与贝塔协作完成完整方案。\n\n交付物：shared-knowledge/architecture/permission-control-plan.md\n截止时间：今晚 21:30",
+  "createdAt": "2026-03-19T19:21:00+08:00",
+  "read": false
+}

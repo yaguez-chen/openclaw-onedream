@@ -1,0 +1,7 @@
+{"id":"msg-20260319-120055-1106502","to":"lambda","subject":"收到修复","sent_at":"2026-03-19T12:00:55+08:00","acked_at":null,"status":"pending"}
+{"id":"msg-20260319-120936-1109599","to":"梦想家","subject":"🔴 Session健康紧急警报","sent_at":"2026-03-19T12:09:36+08:00","acked_at":null,"status":"pending"}
+{"id":"msg-20260319-154209-1202114","to":"梦想家","subject":"任务超时通知","sent_at":"2026-03-19T15:42:09+08:00","acked_at":null,"status":"pending"}
+{"id":"msg-20260319-154801-1207922","to":"梦想家","subject":"⚠️ SESSION健康检测警报","sent_at":"2026-03-19T15:48:01+08:00","acked_at":null,"status":"pending"}
+{"id":"msg-20260319-160901-1217429","to":"梦想家","subject":"🔴 监察警报：Session严重停滞","sent_at":"2026-03-19T16:09:01+08:00","acked_at":null,"status":"pending"}
+{"timestamp":"$(date -Iseconds)","from":"beta","to":"dreamer","subject":"🔴 Session健康检测警报","priority":"urgent","inbox_file":"msg-20260319-172345-beta-session-alert.json","webhook_triggered":true}
+{"id":"msg-20260319-175346-1268285","to":"main","subject":"🔴 SESSION健康警报","sent_at":"2026-03-19T17:53:46+08:00","acked_at":null,"status":"pending"}

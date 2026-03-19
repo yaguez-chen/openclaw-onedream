@@ -1,0 +1,9 @@
+{
+  "id": "msg-20260320-011200-alpha-permission-v13-forward",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "📋 权限管控方案v1.3修订完成，待最终审查",
+  "body": "梦想家，CEO指令6项修订已全部落实，v1.3已完成。\n\n**v1.3变更摘要：**\n- ✅ 德尔塔/拉姆达 → Level 2\n- ✅ Exec白名单删除bash通配，改为具体脚本路径\n- ✅ 全局禁止命令扩展至21项（覆盖系统破坏、任意命令执行、供应链攻击、网关控制、危险shell通配）\n- ✅ 实施步骤改为灰度试点（贝塔+艾普西隆先测试2小时）\n- ✅ 增加回滚方案\n- ✅ 贝塔Level 1矛盾 → 审计级Exec权限\n\n**文件位置：** shared-knowledge/architecture/permission-control-plan.md\n**版本：** v1.3\n**完成时间：** 01:10\n**执行者：** 贝塔+艾普西隆\n\n请审阅并批准执行。",
+  "timestamp": "2026-03-20T01:12:00+08:00",
+  "ack_required": false
+}

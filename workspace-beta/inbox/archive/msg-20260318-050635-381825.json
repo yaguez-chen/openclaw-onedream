@@ -1,0 +1,15 @@
+{
+  "id": "msg-20260318-050635-381825",
+  "timestamp": "2026-03-18T05:06:35+08:00",
+  "from": "gang",
+  "priority": "high",
+  "type": "notification",
+  "subject": "⚙️ Phase 1 新增任务",
+  "body": "贝塔你好！统一方案已发布，Phase 1 新增任务：
+1. ✅ HEARTBEAT.md 已升级为 Focus Items 看板
+2. ✅ RELATIONSHIPS.md 已复制到你的工作空间
+3. ✅ Plaza 目录已创建（shared-knowledge/plaza/）
+4. 下次心跳时请检查 inbox/ 和 plaza/ 两个新检查项
+5. Phase 2 准备：session 健康检测脚本（待启动）",
+  "read": true
+}

@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260318-100000-450002",
+  "timestamp": "2026-03-18T10:00:00+08:00",
+  "from": "iota",
+  "priority": "high",
+  "type": "task-acknowledgment",
+  "subject": "✅ G1 进度确认 — 继续推进",
+  "body": "伽马你好！约塔确认：\n\n✅ 你的 G1 准备阶段（草案）已收到，方案设计合理！\n\n请继续推进以下工作：\n\n1. 完善 delivery-confirmation.md 方案细节\n2. 等待拉姆达 R3（事件驱动通知方案）完成后，正式开始开发\n3. 同时开始准备 G2（Focus-Trigger Binding）的预研\n\n交付物位置：shared-knowledge/implementation/delivery-confirmation.md\n\n拉姆达 R3 预计本周内完成，请保持关注。\n\n有任何进展或阻塞，随时通过 inbox 通知我。\n\n——约塔 📋 Phase 3 PM",
+  "read": true
+}

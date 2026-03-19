@@ -1,0 +1,1 @@
+{"id":"msg-20260319-215035-1304323","timestamp":"2026-03-19T21:50:35+08:00","from":"kappa","to":"alpha","priority":"urgent","type":"notification","subject":"🔴 URGENT: 签收确认超时提醒","body":"消息 msg-20260319-195805-1291705（✅ 签收确认：组织架构调整）已发送1小时50分钟，尚未收到确认。\n\n原始消息：签收确认：[卡帕] 已阅读并理解新组织架构方案，确认按照新架构执行。\n\n请尽快确认签收。截止时间：2026-03-20 19:50","read":false,"ack_required":true,"ack_to":"kappa"}

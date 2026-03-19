@@ -1,0 +1,19 @@
+{
+  "id": "25f333a4-a414-4a10-9cf3-e58e5a3f0ab6",
+  "enqueuedAt": 1773886318230,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "**Inbox轮询完成** 📬\n\n扫描了 11 个 workspace 的 inbox 目录，结果如下：\n- **未读消息：** 0 条\n- **已发送确认：** 0 条\n- **已接收确认：** 0 条\n\n所有 inbox 目录干净，无待处理消息。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773909667731,
+  "lastError": "Request failed with status code 400"
+}

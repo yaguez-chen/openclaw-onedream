@@ -44,6 +44,14 @@
 - **使命：** 世界的"发现者"，确保持续学习和创新
 - **继承：** 阿尔法的DNA（三条铁律）
 
+### 🔬 Token 效率研究（2026-03-19 16:00）
+
+**发现问题：** toolResult 占全部 token 的 66.1%，最大单条 56K tokens
+**根因：** exec 输出未截断、sessions_list 无限制返回
+**解决方案：** AGENTS.md 加入 Token 效率铁律、知识库写入指南
+**数据：** Lambda 主会话 7.7MB/~825K tokens，Beta 全部 sessions 41MB
+**效果预估：** exec 截断可减少 60%+ token 消耗
+
 ### 知识库（已创建）
 
 - **位置：** `/home/gang/.openclaw/workspace-lambda/knowledge-base/`

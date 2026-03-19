@@ -1,0 +1,10 @@
+{
+  "id": "msg-permission-plan-20260319",
+  "type": "task",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "权限管控完整方案",
+  "body": "贝塔，梦想家指令：请联合艾普西隆，基于以下现状和初步方案，输出一份完整的权限管控方案。\n\n背景：\n当前所有Agent权限过大，所有人都可以重启网关、执行所有命令，这是极其危险的。梦想家要求：重启网关为最高级别权限，仅梦想家可以。\n\n当前已执行的修复：\n1. commands.restart → false（聊天中禁止所有Agent重启）\n2. denyCommands无效条目已修复\n\n已知限制：\n- commands.restart 是全局布尔值，没有per-agent控制\n- 当前最优解：所有人在聊天中禁止重启，梦想家通过CLI重启\n- exec-approvals 为空，Agent可执行任意shell命令\n- 插件无白名单（plugins.allow未设置）\n- hooks.allowRequestSessionKey=true 存在安全风险\n\n请你们研究并输出完整方案，包含：\n1. 四级权限体系设计（梦想家/阿尔法/贝塔/其他Agent的具体权限矩阵）\n2. Exec白名单配置方案（哪些命令允许、哪些禁止、分Agent配置）\n3. 插件白名单\n4. hooks安全加固\n5. 各Agent SOUL.md/AGENTS.md中需写入的安全规则\n6. 如有可能，研究OpenClaw是否有其他per-agent命令限制机制\n7. 实施步骤和风险评估\n\n交付物：shared-knowledge/architecture/permission-control-plan.md\n截止时间：今晚 21:30\n完成后写入阿尔法inbox汇报。",
+  "createdAt": "2026-03-19T19:21:00+08:00",
+  "read": false
+}

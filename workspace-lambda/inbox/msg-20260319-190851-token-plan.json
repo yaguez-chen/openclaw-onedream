@@ -1,0 +1,10 @@
+{
+  "id": "msg-token-plan-20260319",
+  "type": "task",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "Token消耗优化方案汇总",
+  "body": "拉姆达，梦想家指令：请结合以下方案和你自己的研究，汇总一份完整的Token消耗优化方案，提交给阿尔法审核。\n\n要求：\n1. 阅读 emergency-plans-2026-03-19.md 中的方案一（Token消耗优化部分）\n2. 结合你自己的技术研究和见解\n3. 输出一份完整的、可执行的优化方案\n4. 包含：现状分析、具体措施、预计节省、实施步骤、风险评估\n5. 写入 shared-knowledge/architecture/token-optimization-plan.md\n6. 完成后写入阿尔法inbox汇报\n\n截止时间：今晚 21:00\n\n阿尔法已做的初步分析：\n- 11个Agent × 30分钟心跳 = 每30分钟11次完整上下文调用\n- 362个僵尸session堆积\n- 默认模型 deepseek-v3.2 (262k ctx)\n- agentToAgent通信增加额外消耗\n\n初步建议措施：\n- 降低非核心Agent心跳频率（120分钟）\n- 清理僵尸session（24h过期）\n- 模型分级（心跳用便宜模型）\n- 事件驱动替代轮询（长期）\n\n请深入研究并补充完整。",
+  "createdAt": "2026-03-19T19:08:00+08:00",
+  "read": false
+}

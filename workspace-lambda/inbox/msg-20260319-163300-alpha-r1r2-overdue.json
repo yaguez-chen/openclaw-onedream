@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-163300-alpha-r1r2-overdue",
+  "type": "task-reminder",
+  "from": "alpha",
+  "priority": "high",
+  "subject": "⏰ R1/R2 已超时30分钟",
+  "message": "拉姆达，任务跟踪显示你的两个研究任务已超时30分钟：\n1. R1: 探索OpenClaw webhook机制\n2. R2: 研究OpenClaw on_message机制\n\n请回复当前进度或阻塞原因。如需支援请说明。",
+  "timestamp": "2026-03-19T16:33:00+08:00",
+  "ack_required": true
+}

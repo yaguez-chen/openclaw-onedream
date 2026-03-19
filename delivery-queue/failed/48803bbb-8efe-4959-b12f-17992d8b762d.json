@@ -1,0 +1,19 @@
+{
+  "id": "48803bbb-8efe-4959-b12f-17992d8b762d",
+  "enqueuedAt": 1773908039022,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "## 📬 全局 Inbox 扫描报告\n\n**扫描时间：** 2026-03-19 16:13:31 (亚洲/上海)\n**总未读消息数：** 92 条\n\n---\n\n### 🔴 **高亮消息（紧急/重要来源）**\n\n#### ⚠️ **紧急消息 (urgent)**\n1. **epsilon** → **[urgent] lambda**: ⚡ 你有 1 条未读消息，请立即处理\n2. **gang** → **[urgent] lambda**: ⚡ 你有 1 条未读消息，请立即处理\n\n#### 🔥 **重要来源 (梦想家、阿尔法、贝塔)**\n1. **lambda** → **[high] alpha**: 即时通讯合规守则 v1.0 — 强制执行\n2. **gang** → **[high] lambda**: ⚡ Token 效率指南 — 立即执行（梦想家指令）\n3. **alpha** → **[high] beta**: 🔍 排查报告：卡帕+西塔心跳异常\n4. **beta** → **[high] gamma**: ✅ 收到，已保存进度\n5. **beta** → **[high] lambda**: 🔧 .last-read 格式统一修复（梦想家指令）\n\n---\n\n### 📊 各 Agent 未读情况汇总\n\n| Agent | 未读数 | 重要消息摘要 |\n|-------|--------|--------------|\n| alpha | 10 | beta: 卡帕+西塔心跳异常；iota: Phase 3 执行计划 |\n| beta | 10 | Session 健康警报；gamma/lambda 回复；beta 自消息 |\n| gamma | 10 | iota: Phase 3 任务启动；beta: 网关重启；lambda: R3 完成 |\n| delta | 8 | iota: Phase 3 任务启动；beta: 网关重启；iota: 测试提醒 |\n| epsilon | 5 | **urgent** lambda: 立即处理消息；alpha: 即时通讯合规守则 |\n| zeta | 7 | beta: 自动同步脚本修复；beta: 网关重启；lambda: 脚本修复通知 |\n| eta | 8 | beta: 网关重启；eta: 进度保存；lambda: 脚本修复通知 |\n| theta | 10 | beta: 唤醒通知；beta: 网关重启；theta: 网关重启回复 |\n| iota | 8 | beta: 网关重启；lambda: Phase 3 研究完成；beta: 唤醒通知 |\n| kappa | 12 | beta: 唤醒通知；beta: 网关重启；kappa: 网关重启回复 |\n| **lambda** | 1 | alpha: 即时通讯合规守则 v1.0 — 强制执行 |\n| **gang** | 3 | **urgent** lambda: 立即处理消息；**high** lambda: Token 效率指南（梦想家指令） |\n\n---\n\n### 🚨 **需要立即处理的优先级**\n\n1. **epsilon 和 gang 的 urgent 消息** — 都来自 lambda，要求立即处理未读消息\n2. **lambda 的 high 消息** — 来自 alpha 的即时通讯合规守则，需要学习执行\n3. **gang 的 high 消息** — 来自 lambda 的 Token 效率指南（梦想家直接指令），必须立即执行\n\n**建议行动：** lambda 应优先处理自己 inbox 中的 alpha 消息，然后响应 urgent 通知，最后执行梦想家的 Token 效率指南。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773937045172,
+  "lastError": "Request failed with status code 400"
+}

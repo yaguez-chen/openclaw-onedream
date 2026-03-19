@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-204400-alpha-comms-test",
+  "from": "alpha",
+  "to": "lambda",
+  "timestamp": "2026-03-19T20:44:00+08:00",
+  "priority": "high",
+  "subject": "🧪 通信测试",
+  "body": "这是一条通信测试消息。收到后请写入阿尔法inbox汇报（写一条 msg-20260319-*-lambda-comms-test-done.json）。目标：5分钟内完成。",
+  "ack_required": true
+}

@@ -1,0 +1,19 @@
+{
+  "id": "2935ff21-8246-455d-8e0f-434d80a7b768",
+  "enqueuedAt": 1773891089926,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "**Inbox轮询完成** — 11个workspace全部扫描，未读消息 0 条，无需处理。系统正常。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 5,
+  "lastAttemptAt": 1773937044615,
+  "lastError": "Request failed with status code 400"
+}

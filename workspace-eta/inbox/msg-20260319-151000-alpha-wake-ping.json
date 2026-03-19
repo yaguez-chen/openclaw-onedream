@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260319-151000-alpha-wake-ping",
+  "type": "wake-ping",
+  "from": "alpha",
+  "priority": "medium",
+  "subject": "Session健康唤醒",
+  "message": "你的session被贝塔标记为停滞超过30分钟。请立即处理inbox并回复确认。",
+  "timestamp": "2026-03-19T15:10:00+08:00",
+  "ack_required": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": "ack-20260319-165200-theta-wake-ping.json",
+  "inReplyTo": "msg-20260319-151000-alpha-wake-ping.json",
+  "read": true,
+  "readAt": "2026-03-19T16:52:00+08:00",
+  "sender": "theta",
+  "status": "acknowledged",
+  "summary": "收到session健康唤醒通知，已处理inbox并回复确认。session状态已恢复正常。"
+}
