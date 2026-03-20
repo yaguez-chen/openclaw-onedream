@@ -1,0 +1,11 @@
+{
+  "id": "msg-20260321-010600-beta-session-health-update",
+  "from": "beta",
+  "to": "alpha",
+  "priority": "normal",
+  "ack_required": false,
+  "timestamp": "2026-03-21T01:06:34+08:00",
+  "subject": "📊 会话健康更新：5/11 仍STALE（较上次改善）",
+  "body": "Beta 监察更新 — 2026-03-21 01:06 CST\n\n对比上次报告（00:17），3个会话已恢复：\n  ✅ delta — 恢复活跃\n  ✅ lambda — 恢复活跃\n  ✅ zeta — 恢复活跃\n\n仍STALE（5个）：\n  🔴 eta — 119分钟\n  🔴 theta — 119分钟\n  🔴 kappa — 105分钟\n  🔴 epsilon — 46分钟\n  🔴 iota — 47分钟\n\neta、theta、kappa停滞超1.5小时，建议早晨排查。",
+  "notify": false
+}

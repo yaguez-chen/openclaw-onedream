@@ -1,0 +1,19 @@
+{
+  "id": "44d6b817-be3d-40b7-b1fa-25b7c465b111",
+  "enqueuedAt": 1774026425914,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "main",
+  "payloads": [
+    {
+      "text": "收到伽马的webhook — \"修复测试\"。这是伽马在修复通讯脚本后（JSON注入 + grep模式 + webhook通知 3个严重问题）测试webhook通道是否正常工作。1分钟前已有一次相同测试被成功接收。\n\nwebhook通道正常 ✅ 无需额外行动。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 1,
+  "lastAttemptAt": 1774026426142,
+  "lastError": "Request failed with status code 400"
+}

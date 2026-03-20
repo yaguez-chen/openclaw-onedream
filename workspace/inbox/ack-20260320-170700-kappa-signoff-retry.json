@@ -1,0 +1,10 @@
+{
+  "id": "ack-20260320-170700-kappa-signoff-retry",
+  "originalId": "msg-20260320-170700-kappa-signoff-retry",
+  "timestamp": "2026-03-20T17:42:00+08:00",
+  "from": "alpha",
+  "to": "kappa",
+  "type": "ack",
+  "read": true,
+  "readAt": "2026-03-20T17:42:00+08:00"
+}

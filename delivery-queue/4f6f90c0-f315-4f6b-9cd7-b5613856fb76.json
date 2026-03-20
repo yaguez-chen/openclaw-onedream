@@ -1,0 +1,19 @@
+{
+  "id": "4f6f90c0-f315-4f6b-9cd7-b5613856fb76",
+  "enqueuedAt": 1774026380715,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "main",
+  "payloads": [
+    {
+      "text": "收到伽马的webhook测试消息 ✅ 时间：2026-03-21 01:03 GMT+8。一切正常，webhook通道畅通。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 1,
+  "lastAttemptAt": 1774026380877,
+  "lastError": "Request failed with status code 400"
+}

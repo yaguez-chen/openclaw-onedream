@@ -1,4 +1,5 @@
-{"id":"msg-20260319-130407-1135122","to":"lambda","subject":"收到修复","sent_at":"2026-03-19T13:04:07+08:00","acked_at":null,"status":"pending"}
+{"id":"msg-20260319-130407-1135122","to":"lambda","subject":"收到修复","sent_at":"2026-03-19T13:04:07+08:00","acked_at":null,"status":"read","note":"test_message_already_handled"}
 {"id":"msg-20260319-142210-1169366","to":"lambda","subject":"超时消息升级","sent_at":"2026-03-19T14:22:10+08:00","acked_at":"2026-03-19T14:22:30+08:00","status":"read"}
-{"id":"msg-20260319-195805-1291705","to":"alpha","subject":"✅ 签收确认：组织架构调整","sent_at":"2026-03-19T19:58:05+08:00","acked_at":null,"status":"pending"}
-{"id":"msg-20260319-215035-1304323","to":"alpha","subject":"🔴 URGENT: 签收确认超时提醒","sent_at":"2026-03-19T21:50:35+08:00","acked_at":null,"status":"pending"}
+{"id":"msg-20260319-195805-1291705","to":"alpha","subject":"✅ 签收确认：组织架构调整","sent_at":"2026-03-19T19:58:05+08:00","acked_at":null,"status":"failed","reason":"wrong_inbox_path"}
+{"id":"msg-20260319-215035-1304323","to":"alpha","subject":"🔴 URGENT: 签收确认超时提醒","sent_at":"2026-03-19T21:50:35+08:00","acked_at":null,"status":"failed","reason":"wrong_inbox_path"}
+{"id":"msg-20260320-170700-kappa-signoff-retry","to":"alpha","subject":"✅ 签收确认：组织架构调整（重发）","sent_at":"2026-03-20T17:07:00+08:00","acked_at":null,"status":"pending"}

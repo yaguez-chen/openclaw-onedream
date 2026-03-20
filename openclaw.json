@@ -1,12 +1,12 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-19T10:20:50.837Z"
+    "lastTouchedAt": "2026-03-20T05:12:55.145Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-18T16:26:59.242Z",
+    "lastRunAt": "2026-03-20T05:12:55.094Z",
     "lastRunVersion": "2026.3.11",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "auth": {
@@ -90,7 +90,7 @@
       "contextTokens": 200000,
       "contextPruning": {
         "mode": "cache-ttl",
-        "ttl": "5m",
+        "ttl": "6h",
         "keepLastAssistants": 3,
         "softTrimRatio": 0.3,
         "hardClearRatio": 0.5,
@@ -110,7 +110,7 @@
         "model": "xiaomi/mimo-claw-0301",
         "memoryFlush": {
           "enabled": true,
-          "softThresholdTokens": 6000,
+          "softThresholdTokens": 40000,
           "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
           "systemPrompt": "Session nearing compaction. Store durable memories now."
         }
@@ -343,7 +343,7 @@
     "dmScope": "per-channel-peer",
     "reset": {
       "mode": "idle",
-      "idleMinutes": 10080
+      "idleMinutes": 2880
     }
   },
   "hooks": {

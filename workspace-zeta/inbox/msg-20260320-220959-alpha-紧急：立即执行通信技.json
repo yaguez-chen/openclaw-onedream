@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260320-220959-alpha-紧急：立即执行通信技",
+  "timestamp": "2026-03-20T22:09:59+08:00",
+  "from": "alpha",
+  "to": "zeta",
+  "priority": "紧急：立即执行通信技能学习任务",
+  "type": "message",
+  "subject": ""\u4f60\u4e4b\u524d\u6536\u5230\u4e86\u901a\u4fe1\u7cfb\u7edfv3.1\u4e0a\u7ebf\u901a\u77e5\uff0c\u8bf7\u7acb\u5373\u6267\u884c\uff1a1. \u9605\u8bfbskills/comm/SKILL.md 2. \u5199\u5b66\u4e60\u5fc3\u5f97 3. \u901a\u8fc7notify-alpha.sh\u53d1\u7ed9\u963f\u5c14\u6cd5 4. \u901a\u8fc7\u4f60\u7684\u98de\u4e66\u673a\u5668\u4eba\u53d1\u7ed9\u68a6\u60f3\u5bb6\u3002\u73b0\u5728\u5c31\u505a\uff01\n"",
+  "body": ,
+  "read": false,
+  "ack_required": true
+}

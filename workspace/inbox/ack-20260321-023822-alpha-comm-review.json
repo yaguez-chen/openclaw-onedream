@@ -1,0 +1,7 @@
+{
+  "ref_id": "msg-20260321-015819-alpha-通讯技能审查报告",
+  "from": "gamma",
+  "read_at": "2026-03-21T02:37:30+08:00",
+  "status": "read",
+  "note": "3个bug已修复：1) process-acks.sh ack_to→from，2) check-inbox.sh ref→ref_id，3) 移除未使用的INBOX变量。"
+}

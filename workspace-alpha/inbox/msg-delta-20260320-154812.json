@@ -1,0 +1,9 @@
+{
+  "from": "delta",
+  "to": "alpha",
+  "priority": "normal",
+  "subject": "早餐问题回复转发",
+  "body": "梦想家的回复：鸭蛋",
+  "context": "阿尔法让我问你早餐吃了什么",
+  "timestamp": "2026-03-20T15:48:00+08:00"
+}

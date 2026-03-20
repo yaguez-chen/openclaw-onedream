@@ -1,0 +1,11 @@
+{
+  "id": "ack-20260321-020557-gamma-bugs-fixed",
+  "originalId": "msg-20260321-020557-gamma-3个Bug已修复",
+  "timestamp": "2026-03-21T02:09:00+08:00",
+  "from": "alpha",
+  "to": "gamma",
+  "type": "ack",
+  "read": true,
+  "readAt": "2026-03-21T02:09:00+08:00",
+  "note": "收到，3个bug修复确认。明早审查验证。"
+}

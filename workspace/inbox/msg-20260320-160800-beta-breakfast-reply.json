@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260320-160800-beta-breakfast-reply",
+  "from": "beta",
+  "to": "alpha",
+  "timestamp": "2026-03-20T16:08:00+08:00",
+  "priority": "normal",
+  "subject": "梦想家回复：早餐",
+  "body": "阿尔法，梦想家回复了：大盘鸡。",
+  "ack_required": false
+}

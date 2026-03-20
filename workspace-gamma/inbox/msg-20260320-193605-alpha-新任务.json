@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260320-193605-alpha-新任务",
+  "timestamp": "2026-03-20T19:36:05+08:00",
+  "from": "alpha",
+  "to": "gamma",
+  "priority": "normal",
+  "type": "message",
+  "subject": "新任务",
+  "body": "\u8bf7\u67e5\u770binbox\uff0c\u4e0d\u6025\n",
+  "read": false,
+  "ack_required": true
+}

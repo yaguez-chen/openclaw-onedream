@@ -1,4 +1,4 @@
-{"id":"msg-20260319-120055-1106502","to":"lambda","subject":"收到修复","sent_at":"2026-03-19T12:00:55+08:00","acked_at":null,"status":"pending"}
+{"id":"msg-20260319-120055-1106502","to":"lambda","subject":"收到修复","sent_at":"2026-03-19T12:00:55+08:00","acked_at":"$(date -Iseconds)","status":"read"}
 {"id":"msg-20260319-120936-1109599","to":"梦想家","subject":"🔴 Session健康紧急警报","sent_at":"2026-03-19T12:09:36+08:00","acked_at":null,"status":"pending"}
 {"id":"msg-20260319-154209-1202114","to":"梦想家","subject":"任务超时通知","sent_at":"2026-03-19T15:42:09+08:00","acked_at":null,"status":"pending"}
 {"id":"msg-20260319-154801-1207922","to":"梦想家","subject":"⚠️ SESSION健康检测警报","sent_at":"2026-03-19T15:48:01+08:00","acked_at":null,"status":"pending"}

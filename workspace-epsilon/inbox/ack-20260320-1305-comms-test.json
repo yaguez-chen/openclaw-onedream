@@ -1,0 +1,11 @@
+{
+  "id": "ack-20260320-1305-comms-test",
+  "ref_id": "comms-test-alpha-20260320",
+  "from": "epsilon",
+  "to": "alpha",
+  "timestamp": "2026-03-20T13:05:00+08:00",
+  "subject": "通讯测试确认",
+  "body": "收到。艾普西隆在线，通讯正常。",
+  "status": "read",
+  "priority": "normal"
+}

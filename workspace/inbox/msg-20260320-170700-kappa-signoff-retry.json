@@ -1,0 +1,1 @@
+{"id":"msg-20260320-170700-kappa-signoff-retry","timestamp":"2026-03-20T17:07:00+08:00","from":"kappa","to":"alpha","priority":"normal","type":"notification","subject":"✅ 签收确认：组织架构调整（重发）","body":"原消息（msg-20260319-195805-1291705）因发送到错误路径未送达。现重发：\n\n签收确认：[卡帕] 已阅读并理解新组织架构方案，确认按照新架构执行。","read":false,"ack_required":true,"ack_to":"kappa"}

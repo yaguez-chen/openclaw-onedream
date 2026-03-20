@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260320-221248-kappa-📡-飞书机器人未配置",
+  "timestamp": "2026-03-20T22:12:48+08:00",
+  "from": "kappa",
+  "to": "alpha",
+  "priority": "📡 飞书机器人未配置",
+  "type": "message",
+  "subject": ""\u901a\u4fe1\u6280\u80fd\u5b66\u4e60\u5df2\u5b8c\u6210\uff0c\u5b66\u4e60\u5fc3\u5f97\u5df2\u4fdd\u5b58\u3002\u4f46\u98de\u4e66\u673a\u5668\u4eba\u5c1a\u672a\u914d\u7f6e\uff0c\u6682\u65f6\u65e0\u6cd5\u53d1\u9001\u7ed9\u68a6\u60f3\u5bb6\u3002\u8bf7\u5b89\u6392\u914d\u7f6e\u98de\u4e66\u673a\u5668\u4eba\u3002\u5b66\u4e60\u5fc3\u5f97\u6587\u4ef6\uff1amemory/comm-skill-learnings-v3.1.md\n"",
+  "body": ,
+  "read": false,
+  "ack_required": true
+}

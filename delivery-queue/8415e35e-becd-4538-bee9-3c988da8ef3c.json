@@ -1,0 +1,19 @@
+{
+  "id": "8415e35e-becd-4538-bee9-3c988da8ef3c",
+  "enqueuedAt": 1773965002151,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "📬 **全局 Inbox 轮询报告** — 2026-03-20 08:03\n\n✅ **无未读消息。** 所有 11 个 Agent 的 inbox 均已同步至最新。\n\n| Agent | 总消息数 | 最近已读 |\n|-------|---------|---------|\n| alpha | 32 | zeta-p0-complete (05:06) |\n| beta | 38 | epsilon-permission (01:06) |\n| lambda | 40 | alpha-P0-CRITICAL (00:49) |\n| delta | 163 | alpha-day2-task (00:46) |\n| epsilon | 25 | epsilon-reply (01:14) |\n| eta | 19 | arch-restructure |\n| gamma | 28 | arch-restructure |\n| iota | 32 | arch-restructure |\n| kappa | 23 | arch-restructure |\n| theta | 18 | arch-restructure |\n| zeta | 19 | alpha-p0-task |\n\n无 urgent/critical 消息待处理。一切平静 🦞",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 1,
+  "lastAttemptAt": 1773965002363,
+  "lastError": "Request failed with status code 400"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ack-20260320-231820-beta-learning",
+  "originalId": "msg-20260320-231820-beta-📡-通信协议v3.1学习心",
+  "timestamp": "2026-03-20T23:46:00+08:00",
+  "from": "alpha",
+  "to": "beta",
+  "type": "ack",
+  "read": true,
+  "readAt": "2026-03-20T23:46:00+08:00"
+}

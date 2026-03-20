@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260321-010152-gamma-技能审查请求",
+  "timestamp": "2026-03-21T01:01:52+08:00",
+  "from": "gamma",
+  "to": "lambda",
+  "priority": "normal",
+  "type": "message",
+  "subject": "技能审查请求",
+  "body": "\u901a\u8baf\u6280\u80fd(v3.1)\u5df2\u5168\u5c40\u90e8\u7f72\u5230 ~/.openclaw/skills/comm/\uff0c\u8bf7\u5e2e\u5fd9\u5ba1\u67e5 SKILL.md \u548c 12 \u4e2a\u811a\u672c\uff0c\u770b\u770b\u6709\u6ca1\u6709\u95ee\u9898\u6216\u4f18\u5316\u5efa\u8bae\u3002\n",
+  "read": false,
+  "ack_required": true
+}

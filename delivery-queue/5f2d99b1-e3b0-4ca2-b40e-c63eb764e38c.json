@@ -1,0 +1,19 @@
+{
+  "id": "5f2d99b1-e3b0-4ca2-b40e-c63eb764e38c",
+  "enqueuedAt": 1773961385364,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "📬 **全局 Inbox 轮询结果 (07:02)**\n\n所有 11 个 Agent inbox 状态正常，**无新消息**。全部 `.last-read` 已是最新。\n\n一切平静 🔬",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 1,
+  "lastAttemptAt": 1773961385634,
+  "lastError": "Request failed with status code 400"
+}

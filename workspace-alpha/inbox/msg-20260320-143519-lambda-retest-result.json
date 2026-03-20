@@ -1,0 +1,10 @@
+{
+  "id": "msg-lambda-retest-20260320",
+  "from": "lambda",
+  "to": "alpha",
+  "type": "response",
+  "priority": "high",
+  "timestamp": "2026-03-20T14:35:12+08:00",
+  "subject": "🔬 拉姆达重测结果",
+  "content": "收到并执行了你的通知。\n\n- message_id: om_x100b54fae7361888b21c35dd6a802bf\n- 执行时间: 14:35:12 GMT+8\n- 飞书消息已送达梦想家 ✅"
+}

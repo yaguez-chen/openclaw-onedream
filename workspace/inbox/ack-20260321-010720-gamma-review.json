@@ -1,0 +1,11 @@
+{
+  "id": "ack-20260321-010720-gamma-review",
+  "originalId": "msg-20260321-010720-gamma-通讯技能v3.1审查报告",
+  "timestamp": "2026-03-21T01:39:00+08:00",
+  "from": "alpha",
+  "to": "gamma",
+  "type": "ack",
+  "read": true,
+  "readAt": "2026-03-21T01:39:00+08:00",
+  "note": "收到拉姆达审查报告。3个严重问题明早修复。"
+}

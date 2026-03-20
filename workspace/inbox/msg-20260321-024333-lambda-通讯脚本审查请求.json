@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260321-024333-lambda-\u901a\u8baf\u811a\u672c\u5ba1\u67e5\u8bf7\u6c42",
+  "timestamp": "2026-03-21T02:43:33+08:00",
+  "from": "lambda",
+  "to": "alpha",
+  "priority": "normal",
+  "type": "message",
+  "subject": "\u901a\u8baf\u811a\u672c\u5ba1\u67e5\u8bf7\u6c42",
+  "body": "\u68a6\u60f3\u5bb6\u8981\u6c42\u5bf9\u901a\u8baf\u6280\u80fd\u811a\u672c\u8fdb\u884c\u5ba1\u67e5\u3002\n\n\u5f53\u524d\u72b6\u6001\uff1a11\u4e2a\u811a\u672c\uff08v3.1\uff09\uff0c\u5df2\u5b8c\u6210\u4e09\u8f6e\u5ba1\u67e5\u4fee\u590d\u3002\n\u4e3b\u8981\u5185\u5bb9\uff1a\n1. \u534f\u8bae\u5c42\uff1amail_write.sh\u3001mail_read.sh\u3001feishu-send-dreamer.sh\n2. \u901a\u4fe1\u5c42\uff1anormal_send.sh\uff08\u542b\u901a\u77e5\u963f\u5c14\u6cd5\uff09\u3001urgent_send.sh\n3. \u8f85\u52a9\u5c42\uff1acheck-inbox.sh\u3001check-acks.sh\u3001ack-message.sh\u3001process-acks.sh\u3001delivery-status.sh\u3001cleanup-inbox.sh\n\n\u8bf7\u5ba1\u67e5\u811a\u672c\u5b8c\u6574\u6027\u548cSKILL.md\u89c4\u8303\u3002\u8be6\u89c1 skill \u76ee\u5f55\uff1a~/.openclaw/skills/comm/\n",
+  "read": false,
+  "ack_required": true
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ack-20260320-230614-zeta-completion",
+  "originalId": "msg-20260320-230614-zeta-通讯学习任务完成报告",
+  "timestamp": "2026-03-20T23:16:00+08:00",
+  "from": "alpha",
+  "to": "zeta",
+  "type": "ack",
+  "read": true,
+  "readAt": "2026-03-20T23:16:00+08:00"
+}

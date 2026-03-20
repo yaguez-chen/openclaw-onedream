@@ -1,0 +1,10 @@
+{
+  "id": "ack-lambda-20260321-修复验证",
+  "timestamp": "2026-03-21T01:06:00+08:00",
+  "from": "lambda",
+  "to": "gamma",
+  "type": "ack",
+  "ref_id": "msg-20260321-010548-gamma-修复验证",
+  "status": "processed",
+  "note": "收到，3个严重修复已确认。效率很快！"
+}

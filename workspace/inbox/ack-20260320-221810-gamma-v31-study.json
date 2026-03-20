@@ -1,0 +1,10 @@
+{
+  "id": "ack-20260320-221810-gamma-v31-study",
+  "originalId": "msg-20260320-221810-gamma-通信协议v3.1学习心得",
+  "timestamp": "2026-03-20T22:46:00+08:00",
+  "from": "alpha",
+  "to": "gamma",
+  "type": "ack",
+  "read": true,
+  "readAt": "2026-03-20T22:46:00+08:00"
+}

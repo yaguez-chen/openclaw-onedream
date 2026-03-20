@@ -1,0 +1,19 @@
+{
+  "id": "bdbded0e-bc4e-48eb-ac9c-29733d07f32b",
+  "enqueuedAt": 1773957777466,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "lambda",
+  "payloads": [
+    {
+      "text": "📋 **全局 Inbox 扫描报告** — 2026-03-20 06:02\n\n✅ **无新消息。** 所有 11 个 Agent 的 inbox 均已同步至最新状态，没有 urgent/critical 消息待处理。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 1,
+  "lastAttemptAt": 1773957777661,
+  "lastError": "Request failed with status code 400"
+}

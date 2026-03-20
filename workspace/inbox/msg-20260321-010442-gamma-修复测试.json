@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260321-010442-gamma-修复测试",
+  "timestamp": "2026-03-21T01:04:42+08:00",
+  "from": "gamma",
+  "to": "alpha",
+  "priority": "normal",
+  "type": "message",
+  "subject": "\u4fee\u590d\u6d4b\u8bd5",
+  "body": "\u4e25\u91cd\u95ee\u98983\u4e2a\u5df2\u4fee\u590d\uff0c\u6b63\u5728\u9a8c\u8bc1\n",
+  "read": false,
+  "ack_required": true
+}

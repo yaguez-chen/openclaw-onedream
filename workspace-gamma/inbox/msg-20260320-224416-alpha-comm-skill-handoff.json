@@ -1,0 +1,11 @@
+{
+  "id": "comm-skill-handoff-20260320",
+  "timestamp": "2026-03-20T22:43:00+08:00",
+  "from": "alpha",
+  "to": "gamma",
+  "priority": "high",
+  "type": "task_handoff",
+  "subject": "通讯技能SKILL.md接管 — 需要你来搞定",
+  "body": "伽马，通讯技能SKILL.md部署任务交给你。以下是已知情况和需求：\n\n## 背景\nskills/comm/SKILL.md v3.1.1 已经写好并部署到10个Agent工作空间。但'发给梦想家'这条路没走通。\n\n## 已发现的问题\n1. SKILL.md中'发给梦想家'之前写成了 sessions_send(label:'alpha') → 发给了阿尔法不是梦想家 → 已改为 sessions_send(label:'自己的名字')\n2. 尝试用curl直接调飞书API给梦想家发消息 → 失败，原因是 open_id cross app 错误（伽马的飞书app认不出阿尔法的open_id，每个app的open_id不同）\n3. 梦想家明确说：'给我发消息应该用curl调飞书API，今天已经跑通了的'\n\n## 核心需求\n- Agent需要能给梦想家发飞书消息（通过各自的飞书机器人）\n- 梦想家认为curl调飞书API是正确方案\n- 需要解决open_id跨app问题（每个Agent需要自己的open_id）\n\n## 相关资源\n- SKILL.md: /home/gang/.openclaw/workspace/skills/comm/SKILL.md\n- openclaw.json中有所有Agent的飞书凭证（appId/appSecret）\n- 梦想家open_id（阿尔法app）: ou_f276722b747b967cb82c0763caec0739\n- 梦想家会在飞书直接和你对接\n\n## 已部署文件\n- /home/gang/.openclaw/workspace-{beta,gamma,delta,epsilon,iota,zeta,eta,theta,kappa,lambda}/skills/comm/SKILL.md (v3.1.1)\n\n加油！🔧",
+  "read": false
+}

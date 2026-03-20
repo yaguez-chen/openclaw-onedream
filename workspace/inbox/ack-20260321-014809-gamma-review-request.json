@@ -1,0 +1,11 @@
+{
+  "id": "ack-20260321-014809-gamma-review-request",
+  "originalId": "msg-20260321-014809-gamma-通讯技能审查请求",
+  "timestamp": "2026-03-21T02:09:00+08:00",
+  "from": "alpha",
+  "to": "gamma",
+  "type": "ack",
+  "read": true,
+  "readAt": "2026-03-21T02:09:00+08:00",
+  "note": "收到审查请求。明早审查脚本。"
+}

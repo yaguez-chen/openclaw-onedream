@@ -1,12 +1,12 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-19T10:20:04.635Z"
+    "lastTouchedAt": "2026-03-20T01:01:59.718Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-18T16:26:59.242Z",
+    "lastRunAt": "2026-03-20T01:01:59.684Z",
     "lastRunVersion": "2026.3.11",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "auth": {
@@ -75,7 +75,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "custom/deepseek-v3.2",
+        "primary": "xiaomi/mimo-claw-0301",
         "fallbacks": [
           "custom/deepseek-v3.2"
         ]
@@ -90,7 +90,7 @@
       "contextTokens": 200000,
       "contextPruning": {
         "mode": "cache-ttl",
-        "ttl": "5m",
+        "ttl": "6h",
         "keepLastAssistants": 3,
         "softTrimRatio": 0.3,
         "hardClearRatio": 0.5,
@@ -107,17 +107,17 @@
       },
       "compaction": {
         "mode": "safeguard",
-        "model": "xiaomi/mimo-v2-flash",
+        "model": "xiaomi/mimo-claw-0301",
         "memoryFlush": {
           "enabled": true,
-          "softThresholdTokens": 6000,
+          "softThresholdTokens": 40000,
           "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
           "systemPrompt": "Session nearing compaction. Store durable memories now."
         }
       },
       "timeoutSeconds": 180,
       "heartbeat": {
-        "every": "30m",
+        "every": "120m",
         "target": "last"
       },
       "maxConcurrent": 4,
@@ -140,7 +140,7 @@
         "workspace": "/home/gang/.openclaw/workspace-beta",
         "agentDir": "/home/gang/.openclaw/agents/beta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "60m",
           "target": "last"
         }
       },
@@ -150,7 +150,7 @@
         "workspace": "/home/gang/.openclaw/workspace-gamma",
         "agentDir": "/home/gang/.openclaw/agents/gamma/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -160,7 +160,7 @@
         "workspace": "/home/gang/.openclaw/workspace-delta",
         "agentDir": "/home/gang/.openclaw/agents/delta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -170,7 +170,7 @@
         "workspace": "/home/gang/.openclaw/workspace-iota",
         "agentDir": "/home/gang/.openclaw/agents/iota/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "60m",
           "target": "last"
         }
       },
@@ -180,7 +180,7 @@
         "workspace": "/home/gang/.openclaw/workspace-zeta",
         "agentDir": "/home/gang/.openclaw/agents/zeta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -190,7 +190,7 @@
         "workspace": "/home/gang/.openclaw/workspace-epsilon",
         "agentDir": "/home/gang/.openclaw/agents/epsilon/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "60m",
           "target": "last"
         }
       },
@@ -200,7 +200,7 @@
         "workspace": "/home/gang/.openclaw/workspace-eta",
         "agentDir": "/home/gang/.openclaw/agents/eta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -210,7 +210,7 @@
         "workspace": "/home/gang/.openclaw/workspace-theta",
         "agentDir": "/home/gang/.openclaw/agents/theta/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -220,7 +220,7 @@
         "workspace": "/home/gang/.openclaw/workspace-kappa",
         "agentDir": "/home/gang/.openclaw/agents/kappa/agent",
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       },
@@ -230,13 +230,13 @@
         "workspace": "/home/gang/.openclaw/workspace-lambda",
         "agentDir": "/home/gang/.openclaw/agents/lambda/agent",
         "model": {
-          "primary": "custom/deepseek-v3.2",
+          "primary": "xiaomi/mimo-claw-0301",
           "fallbacks": [
-            "xiaomi/mimo-claw-0301"
+            "custom/deepseek-v3.2"
           ]
         },
         "heartbeat": {
-          "every": "30m",
+          "every": "120m",
           "target": "last"
         }
       }
@@ -343,7 +343,7 @@
     "dmScope": "per-channel-peer",
     "reset": {
       "mode": "idle",
-      "idleMinutes": 10080
+      "idleMinutes": 2880
     }
   },
   "hooks": {
@@ -459,7 +459,10 @@
         "contacts.add",
         "calendar.add",
         "reminders.add",
-        "sms.send"
+        "sms.send",
+        "system.run",
+        "shell.exec",
+        "process.spawn"
       ]
     }
   },
@@ -479,7 +482,7 @@
           "incrementalMaxDepth": -1,
           "leafMinFanout": 8,
           "condensedMinFanout": 4,
-          "summaryModel": "xiaomi/mimo-v2-flash"
+          "summaryModel": "xiaomi/mimo-claw-0301"
         }
       }
     },
@@ -497,6 +500,12 @@
         "resolvedAt": "2026-03-17T22:44:17.594Z",
         "installedAt": "2026-03-17T22:46:25.646Z"
       }
+    }
+  },
+  "search": {
+    "mode": "bm25",
+    "weights": {
+      "bm25": 1.0
     }
   }
 }

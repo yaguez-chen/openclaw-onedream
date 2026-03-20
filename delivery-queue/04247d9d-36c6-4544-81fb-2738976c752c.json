@@ -1,0 +1,19 @@
+{
+  "id": "04247d9d-36c6-4544-81fb-2738976c752c",
+  "enqueuedAt": 1773972045621,
+  "channel": "feishu",
+  "to": "heartbeat",
+  "accountId": "beta",
+  "payloads": [
+    {
+      "text": "任务完成。Token使用量监控日报已生成并更新。\n\n**摘要：** 2026-03-20 10:00，共监控11个公民，累计约839,000 tokens。需关注theta（主会话146K/73%上限）、eta（主会话122K/61%上限）及lambda（多会话合计176K）。报告已记录至 `reports/token-report-20260320.md`。",
+      "replyToTag": false,
+      "replyToCurrent": false,
+      "audioAsVoice": false
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 1,
+  "lastAttemptAt": 1773972045955,
+  "lastError": "Request failed with status code 400"
+}

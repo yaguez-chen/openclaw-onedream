@@ -8,7 +8,7 @@
       "description": "每天晚上8点向梦想家出健康状态报告（梦想家世界+各agent+系统健康监控）",
       "enabled": true,
       "createdAtMs": 1773405497674,
-      "updatedAtMs": 1773921900027,
+      "updatedAtMs": 1774008044038,
       "schedule": {
         "kind": "cron",
         "expr": "0 20 * * *",
@@ -28,15 +28,14 @@
         "accountId": "beta"
       },
       "state": {
-        "nextRunAtMs": 1774008000000,
-        "lastRunAtMs": 1773921600013,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 300014,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "nextRunAtMs": 1774094400000,
+        "lastRunAtMs": 1774008000015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 44023,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -46,7 +45,7 @@
       "description": "每30分钟监控主会话上下文使用率，超过80%立即压缩，仅在触发压缩时汇报，否则完全静默",
       "enabled": true,
       "createdAtMs": 1773410334940,
-      "updatedAtMs": 1773945004817,
+      "updatedAtMs": 1774031405854,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 * * * *"
@@ -62,15 +61,15 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773946800000,
-        "lastRunAtMs": 1773945000009,
+        "nextRunAtMs": 1774033200000,
+        "lastRunAtMs": 1774031400005,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 4808,
+        "lastDurationMs": 5849,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false,
-        "runningAtMs": 1773946800006
+        "runningAtMs": 1774033200007
       }
     },
     {
@@ -149,9 +148,9 @@
       "agentId": "lambda",
       "name": "全局 Inbox 高频轮询",
       "description": "即时通讯v2.1：每3分钟扫描inbox，触发未读消息处理",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1773885055543,
-      "updatedAtMs": 1773943344067,
+      "updatedAtMs": 1773965002366,
       "schedule": {
         "kind": "every",
         "everyMs": 300000,
@@ -170,13 +169,12 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1773946944067,
-        "lastRunAtMs": 1773943335334,
+        "lastRunAtMs": 1773964985646,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 8733,
+        "lastDurationMs": 16720,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 23,
+        "consecutiveErrors": 29,
         "lastError": "AxiosError: Request failed with status code 400"
       }
     },
@@ -187,7 +185,7 @@
       "description": "每日上午10点监控所有公民token使用量，生成日报",
       "enabled": true,
       "createdAtMs": 1773909375705,
-      "updatedAtMs": 1773909375705,
+      "updatedAtMs": 1773972045957,
       "schedule": {
         "kind": "cron",
         "expr": "0 10 * * *",
@@ -204,7 +202,14 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1773972000000
+        "nextRunAtMs": 1774058400000,
+        "lastRunAtMs": 1773972007890,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 38067,
+        "lastError": "AxiosError: Request failed with status code 400",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     }
   ]

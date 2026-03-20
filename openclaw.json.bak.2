@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-18T16:26:59.274Z"
+    "lastTouchedAt": "2026-03-19T10:20:04.635Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-18T16:26:59.242Z",
@@ -85,8 +85,35 @@
         "custom/deepseek-v3.2": {}
       },
       "workspace": "/home/gang/.openclaw/workspace",
+      "bootstrapMaxChars": 10000,
+      "bootstrapTotalMaxChars": 60000,
+      "contextTokens": 200000,
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "5m",
+        "keepLastAssistants": 3,
+        "softTrimRatio": 0.3,
+        "hardClearRatio": 0.5,
+        "minPrunableToolChars": 50000,
+        "softTrim": {
+          "maxChars": 4000,
+          "headChars": 1500,
+          "tailChars": 1500
+        },
+        "hardClear": {
+          "enabled": true,
+          "placeholder": "[Old tool result content cleared]"
+        }
+      },
       "compaction": {
-        "mode": "safeguard"
+        "mode": "safeguard",
+        "model": "xiaomi/mimo-v2-flash",
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 6000,
+          "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
       },
       "timeoutSeconds": 180,
       "heartbeat": {
@@ -309,25 +336,33 @@
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
-    "restart": true,
+    "restart": false,
     "ownerDisplay": "raw"
   },
   "session": {
+    "dmScope": "per-channel-peer",
     "reset": {
       "mode": "idle",
       "idleMinutes": 10080
-    },
-    "dmScope": "per-channel-peer"
+    }
   },
   "hooks": {
     "enabled": true,
-    "token": "8d54e4627c496b7c2c0fc8abab6fa5a8cbf4ddbb85cfa42e39b83c30e6b4d9a3",
     "path": "/hooks",
+    "token": "8d54e4627c496b7c2c0fc8abab6fa5a8cbf4ddbb85cfa42e39b83c30e6b4d9a3",
+    "defaultSessionKey": "hook:ingress",
     "allowRequestSessionKey": true,
     "allowedSessionKeyPrefixes": [
       "hook:"
     ],
-    "defaultSessionKey": "hook:ingress"
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "startup-inbox-scan": {
+          "enabled": true
+        }
+      }
+    }
   },
   "channels": {
     "feishu": {
@@ -429,6 +464,9 @@
     }
   },
   "plugins": {
+    "slots": {
+      "contextEngine": "lossless-claw"
+    },
     "entries": {
       "feishu": {
         "enabled": true
@@ -444,9 +482,6 @@
           "summaryModel": "xiaomi/mimo-v2-flash"
         }
       }
-    },
-    "slots": {
-      "contextEngine": "lossless-claw"
     },
     "installs": {
       "lossless-claw": {

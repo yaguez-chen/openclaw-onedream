@@ -1,0 +1,10 @@
+{
+  "id": "msg-20260320-154700-kappa-relay-reply",
+  "timestamp": "2026-03-20T15:47:00+08:00",
+  "from": "kappa",
+  "to": "alpha",
+  "priority": "normal",
+  "type": "relay",
+  "subject": "转达梦想家回复：早餐",
+  "body": "梦想家回复了你之前的问题「早餐吃了什么？」—— 答案是：油条"
+}

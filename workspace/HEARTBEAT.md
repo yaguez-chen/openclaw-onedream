@@ -1,58 +1,19 @@
 # HEARTBEAT.md
 
-## Focus Items（持续感知）
+## 每次心跳检查（核心3项）
 
-### 活跃任务
-- [ ] 查看 inbox/ 新消息 | 持续检查 | 来自:系统
-- [ ] 查看 plaza 新帖子 | 持续检查 | 来自:系统
-- [ ] Phase 1 验证 — 检查各 Agent inbox 投递是否成功 | 等待心跳触发
-- [ ] Phase 3 进度 — 等约塔制定执行计划 | 来自:梦想家指令
-- [ ] Control Center 适配 — 等梦想家批准 | 来自:拉姆达方案
+### 1. 收件箱
+- 检查 `inbox/` 新消息（基准: `.last-read`）
+- 如有 `priority=high` 或 `URGENT-*.md`，立即处理
+- 处理后更新 `.last-read`
 
-### 触发器
-- inbox/ 检查（每心跳）— 以 .last-read 为基准
-- /home/gang/.openclaw/plaza/posts/ 检查（每心跳）— 以 .last-read-alpha 为基准
-- 如有高优先级消息（priority=high），立即处理
-- 如有 PHASE4-*.md / KB-*.md / URGENT-*.md 未读通知，读取处理
-- 检查各 Agent 飞书 session 健康状态（发现异常记录）
+### 2. Plaza
+- 检查 `/home/gang/.openclaw/plaza/posts/` 新帖（基准: `.last-read-alpha`）
 
-### 待处理
-- 处理 inbox 中 .last-read 之后的新消息文件
-- 更新 .last-read 为最新处理的消息文件名
-- 如有交付物待归档，及时归档到 shared-knowledge/
+### 3. Agent健康
+- 如有 Agent 超1h未回复inbox，记录并上报梦想家
+- 如有交付物超时30分钟未交，立即通知梦想家
 
-### 追踪中（必须检查）
-- [x] 卡帕形象设计样例 | 截止:今天 12:00 | ✅ 12:40交付（略晚）| plaza已发布
-- [x] 伽马图片生成技能报告 | 截止:今天 13:00 | ✅ 已交付（234行完成报告）| workspace-gamma/
-- [x] 贝塔复盘报告（两次汇报问题） | 截止:今天 12:00 | ✅ 已交付 | inbox-101311
-- [x] 约塔通知拉姆达/伽马/德尔塔启动Phase 3 | 截止:今天 11:00 | ✅ 10:00已执行（read标记问题已修复）
+---
 
-### 🔴 紧急追踪（梦想家指令：全力推进）
-- [ ] 拉姆达 R1+R2 研究任务 | 截止:16:00 | 阻塞G1
-- [ ] 伽马 G1+G2+G3 开发任务 | 截止:17:00 (G1)
-- [ ] 贝塔 P2-01+P2-02 修复任务 | 截止:15:00
-- [ ] 全员qmd技能验证 | 进行中
-
-### 📋 合规检查（每次心跳，来自梦想家紧急指令 2026-03-19 14:45）
-- [ ] 读取新消息时是否更新了 .last-read？（不超1分钟）
-- [ ] 写入 ack 时是否设置了 read=true + readAt？
-- [ ] .last-read 是否与实际处理进度一致？
-- [ ] 是否发现其他 Agent 的违规行为？（如有，记录并上报）
-**守则文件：** shared-knowledge/protocols/im-compliance-rules.md
-**截止自查时间：** 15:30
-**监察：** 贝塔负责定期抽查
-
-### 📋 权限管控执行追踪（每次心跳检查）
-- [ ] 检查艾普西隆是否启动阶段二（2.1灰度试点）
-- [ ] 检查拉姆达Token方案是否提交（截止已过）
-- [ ] 检查通讯系统修复进度
-- [ ] 更新 shared-knowledge/architecture/permission-task-tracker.md 状态
-- [ ] 如有Agent提交交付物，立即通知梦想家
-**以下情况立即通知梦想家：**
-- Agent 超过1小时未回复inbox
-- 超过截止时间30分钟未交付
-- 连续3次心跳未处理inbox
-**需要监控的Agent：**
-- 拉姆达 (R1+R2, 截止16:00)
-- 伽马 (G1+G2+G3, 截止17:00)
-- 贝塔 (P2-01+P2-02, 截止15:00)
+_精简自 2026-03-20 · 详见 `shared-knowledge/` 完整追踪_

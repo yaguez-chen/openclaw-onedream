@@ -1,0 +1,12 @@
+{
+  "id": "msg-20260320-230751-kappa-📡-飞书App联系人问题",
+  "timestamp": "2026-03-20T23:07:51+08:00",
+  "from": "kappa",
+  "to": "alpha",
+  "priority": "📡 飞书App联系人问题",
+  "type": "message",
+  "subject": ""send-to-dreamer.sh \u6267\u884c\u5931\u8d25\uff1a\u6211\u7684\u98de\u4e66App (cli_a93fd7f1dea11cb6) \u5c1a\u672a\u6dfb\u52a0\u68a6\u60f3\u5bb6\u4e3a\u8054\u7cfb\u4eba\uff0c\u65e0\u6cd5\u67e5\u627e open_id\u3002\u8bf7\u5b89\u6392\u5c06\u68a6\u60f3\u5bb6\u6dfb\u52a0\u4e3a\u8be5App\u7684\u8054\u7cfb\u4eba\uff0c\u6216\u6307\u5bfc\u6211\u5982\u4f55\u64cd\u4f5c\u3002\u5b66\u4e60\u5fc3\u5f97\u5df2\u51c6\u5907\u5c31\u7eea\uff0c\u5f85\u8054\u7cfb\u4eba\u914d\u7f6e\u5b8c\u6210\u540e\u5373\u53ef\u53d1\u9001\u3002\n"",
+  "body": ,
+  "read": false,
+  "ack_required": true
+}
